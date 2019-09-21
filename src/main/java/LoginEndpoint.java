@@ -1,14 +1,12 @@
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import com.google.gson.Gson;
 
 
 @Path("/login")
 public class LoginEndpoint {
 
 
-    private final Gson gson = new Gson();
 
     // region get
     @Path("/{login}")
@@ -17,6 +15,4 @@ public class LoginEndpoint {
     public Response getLogin(@PathParam("login") String name) {
         return Response.status(200).entity("Hello").build();
     }
-
-
 }
