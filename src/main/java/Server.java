@@ -15,7 +15,6 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
         org.eclipse.jetty.server.Server server = new org.eclipse.jetty.server.Server();
-        System.out.println("hoi"+server.getURI());
         org.eclipse.jetty.server.ServerConnector serverConnector = new org.eclipse.jetty.server.ServerConnector(server);
         serverConnector.setPort(8094);
 
@@ -23,7 +22,7 @@ public class Server {
         https.addCustomizer(new SecureRequestCustomizer());
 
         SslContextFactory sslContextFactory = new SslContextFactory();
-        sslContextFactory.setKeyStorePath("C:/Users/Manol/IdeaProjects/Beast/ssl/jcg.pkcs12");
+        sslContextFactory.setKeyStorePath("C:/Users/manolo/IdeaProjects/Boodschappenlijst/ssl/jcg.pkcs12");
         sslContextFactory.setKeyStorePassword("manolo");
 
         org.eclipse.jetty.server.ServerConnector sslConnector = new org.eclipse.jetty.server.ServerConnector(server,
