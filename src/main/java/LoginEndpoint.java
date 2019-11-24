@@ -42,14 +42,24 @@ public class LoginEndpoint {
     }
 
 
-
-    @Path("/add/{login}")
+    @POST
+    @Path("/registerUser")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-    @GET
-    public Response getGoodbye(
-            @PathParam("login") String name) {
-            System.out.println("hey");
-            //machine.addUser(name,"testwachtwoord");
-        return Response.status(200).entity("Goodbye"+name).build();
+    public Response registerUser(
+            RegisterRequest registerRequest){
+        System.out.println(registerRequest);
+        return Response.status(200).entity(machine.registerUser(registerRequest)).build();
     }
+
+    @PUT
+    @Path("/changePassword")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response changePassword(
+            ChangePassRequest changePassRequest){
+        System.out.println(changePassRequest);
+        return Response.status(200).entity(machine.changePassword(changePassRequest)).build();
+    }
+
 }

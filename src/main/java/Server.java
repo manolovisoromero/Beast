@@ -8,6 +8,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.glassfish.jersey.servlet.ServletContainer;
+import com.google.gson.Gson;
 
 
 public class Server {
@@ -32,7 +33,11 @@ public class Server {
 
         server.setConnectors(new Connector[]{ serverConnector, sslConnector});
 
-
+        RegisterRequest registerRequest = new RegisterRequest();
+        Gson g = new Gson();
+        registerRequest.setUsername("sss");
+        registerRequest.setPassword("2333");
+        System.out.println(g.toJson(registerRequest));
 
 
         server.setHandler(getJerseyHandler());

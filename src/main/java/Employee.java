@@ -11,7 +11,9 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 
+
 @Entity
+@org.hibernate.annotations.Entity(optimisticLock = OptimisticLockType.ALL, dynamicUpdate = true)
 @Table(name = "employee", uniqueConstraints = {
         @UniqueConstraint(columnNames = "id"),
         @UniqueConstraint(columnNames = "email") })
@@ -57,8 +59,9 @@ public class Employee implements  Serializable{
     }
 
     @Id
-    @Column(name = "id")
-    private int employeeId = 7;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private Integer employeeId;
 
     @Column(name = "email", unique = true, nullable = false, length = 100)
     private String email;
@@ -68,4 +71,10 @@ public class Employee implements  Serializable{
 
     @Column(name = "lastname",  nullable = false, length = 100)
     private String lastName;
+
+    @Override
+    public String toString(){
+        return employeeId +" : "+firstName+" "+lastName+" , "+ email;
+
+    }
 }
