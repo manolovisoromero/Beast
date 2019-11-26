@@ -1,6 +1,15 @@
 import java.util.ArrayList;
 
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import java.util.List;
+
+import Entities.*;
+
+
 public class Machine {
+
 
 
     public ArrayList<Person> persons = new ArrayList<>();
@@ -8,14 +17,61 @@ public class Machine {
     private static Machine machine = new Machine();
 
     private Machine(){
-        System.out.println("hallo");
-        Person persoon1 = new Person("Sjaak", 20,1);
-        Person persoon2 = new Person("Greta", 17,2);
-        Person persoon3 = new Person("Mauro", 6,3);
 
-        persons.add(persoon1);
-        persons.add(persoon2);
-        persons.add(persoon3);
+    }
+
+
+
+    public String registerUser(RegisterRequest registerRequest){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+
+        Query query = session.createQuery("from User");
+        List<User> Users = query.list();
+
+        for(User userr : Users){
+            if(registerRequest.getUsername() == userr.getUsername()){
+                return "Username already taken";
+            }
+        }
+
+        User userr = new User(registerRequest.getUsername(),registerRequest.getPassword());
+        session.save(userr);
+        session.close();
+        HibernateUtil.shutdown();
+
+        return "Register succesful";
+    }
+
+    public String changePassword(ChangePassRequest changePassRequest){
+
+        try{
+            //Open
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+
+
+            //code
+            User user;
+
+            user = (User) session.get(User.class, changePassRequest.getUserID()) ;
+            user.setPassword(changePassRequest.getPassword());
+            session.update(user);
+
+            //Close
+            session.getTransaction().commit();
+            session.close();
+            HibernateUtil.shutdown();
+
+            return "Password change success.";
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+
+
+        return " Password change failed.";
     }
 
 
@@ -23,6 +79,8 @@ public class Machine {
     public static Machine getInstance(){
         return machine;
     }
+
+
 
 
 

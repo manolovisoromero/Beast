@@ -8,6 +8,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.glassfish.jersey.servlet.ServletContainer;
+import com.google.gson.Gson;
 
 
 public class Server {
@@ -22,7 +23,7 @@ public class Server {
         https.addCustomizer(new SecureRequestCustomizer());
 
         SslContextFactory sslContextFactory = new SslContextFactory();
-        sslContextFactory.setKeyStorePath("C:/Users/manolo/IdeaProjects/Boodschappenlijst/ssl/jcg.pkcs12");
+        sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/jcg.pkcs12");
         sslContextFactory.setKeyStorePassword("manolo");
 
         org.eclipse.jetty.server.ServerConnector sslConnector = new org.eclipse.jetty.server.ServerConnector(server,
@@ -32,7 +33,11 @@ public class Server {
 
         server.setConnectors(new Connector[]{ serverConnector, sslConnector});
 
-
+        RegisterRequest registerRequest = new RegisterRequest();
+        Gson g = new Gson();
+        registerRequest.setUsername("sss");
+        registerRequest.setPassword("2333");
+        System.out.println(g.toJson(registerRequest));
 
 
         server.setHandler(getJerseyHandler());
