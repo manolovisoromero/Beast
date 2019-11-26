@@ -110,7 +110,16 @@
       <workItem from="1569068810847" duration="8698000" />
       <workItem from="1571821929388" duration="3224000" />
       <workItem from="1573948635670" duration="252000" />
+      <workItem from="1574346059635" duration="721000" />
     </task>
+    <task id="LOCAL-00001" summary="https">
+      <created>1574346137894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574346137894</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +147,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="https" />
+    <option name="LAST_COMMIT_MESSAGE" value="https" />
   </component>
   <component name="masterDetails">
     <states>
