@@ -1,5 +1,6 @@
 
 
+import REST_calls.RegisterRequest;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.HttpConfiguration;
 import org.eclipse.jetty.server.SecureRequestCustomizer;
@@ -23,7 +24,7 @@ public class Server {
         https.addCustomizer(new SecureRequestCustomizer());
 
         SslContextFactory sslContextFactory = new SslContextFactory();
-        sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/jcg.pkcs12");
+        sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/manolo.pkcs12");
         sslContextFactory.setKeyStorePassword("manolo");
 
         org.eclipse.jetty.server.ServerConnector sslConnector = new org.eclipse.jetty.server.ServerConnector(server,
@@ -56,6 +57,8 @@ public class Server {
         servletHolder.setInitOrder(0);
         servletHolder.setInitParameter("jersey.config.server.provider.classnames",
                 LoginEndpoint.class.getCanonicalName());
+        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
+                AuthenticationEndpoint.class.getCanonicalName());
 
         return handler;
     }

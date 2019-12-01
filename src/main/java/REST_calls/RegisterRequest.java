@@ -1,3 +1,5 @@
+package REST_calls;
+
 public class RegisterRequest {
 
     public String getUsername() {

@@ -17,17 +17,13 @@ public class usergame implements Serializable {
     public usergame() {
     }
 
-    public usergameID getUsergameid() {
-        return usergameid;
-    }
-
-    public void setUsergameid(usergameID usergameid) {
-        this.usergameid = usergameid;
-    }
-
 
     @EmbeddedId
     private usergameID usergameid;
+
+    @Column(name="win", nullable= false)
+    private boolean win;
+
 
     public boolean isWin() {
         return win;
@@ -37,8 +33,15 @@ public class usergame implements Serializable {
         this.win = win;
     }
 
-    @Column(name="win", nullable= false)
-    private boolean win;
+    public usergameID getUsergameid() {
+        return usergameid;
+    }
+
+    public void setUsergameid(usergameID usergameid) {
+        this.usergameid = usergameid;
+    }
+
+
 
     @Override
     public String toString(){

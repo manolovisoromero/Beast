@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+import REST_calls.ChangePassRequest;
+import REST_calls.RegisterRequest;
+import com.google.gson.Gson;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
@@ -8,18 +11,21 @@ import java.util.List;
 import Entities.*;
 
 
+
 public class Machine {
+
+
+    Gson gson = new Gson();
 
 
 
     public ArrayList<Person> persons = new ArrayList<>();
-
     private static Machine machine = new Machine();
+    private Machine(){}
 
-    private Machine(){
-
+    public static Machine getInstance(){
+        return machine;
     }
-
 
 
     public String registerUser(RegisterRequest registerRequest){
@@ -75,10 +81,28 @@ public class Machine {
     }
 
 
+    public String getGame(){
 
-    public static Machine getInstance(){
-        return machine;
+        boolean [][] game = new boolean[][]{
+                new boolean[]{true,true,false,false,false},
+                new boolean[]{true,true,false,true,true},
+                new boolean[]{false,true,false,true,false},
+                new boolean[]{true,false,true,false,false},
+                new boolean[]{true,false,false,false,true}
+        };
+
+        String json = gson.toJson(game);
+        return json;
+
     }
+
+
+
+
+
+
+
+
 
 
 

@@ -13,6 +13,8 @@
         <mapping class="Employee"></mapping>
         <mapping class="Entities.usergame"></mapping>
         <mapping class="Entities.User"></mapping>
+        <mapping class="Entities.Game"></mapping>
+
 
 
     </session-factory>
