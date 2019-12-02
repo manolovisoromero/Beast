@@ -40,6 +40,6 @@ public class game implements Serializable {
     @Column(name = "gameID", unique = true, nullable = false)
     private Integer gameID;
 
-    @Column(name = "content", unique = false, nullable = false, length = 100)
+    @Column(name = "content", nullable = false, length = 100)
     private String content;
 }
