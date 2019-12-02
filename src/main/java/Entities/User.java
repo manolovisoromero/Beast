@@ -15,7 +15,7 @@ import java.io.Serializable;
 
 @Entity
 @org.hibernate.annotations.Entity(optimisticLock = OptimisticLockType.ALL, dynamicUpdate = true)
-@Table(name = "User", uniqueConstraints = {
+@Table(name = "user", uniqueConstraints = {
         @UniqueConstraint(columnNames = "userID")})
 public class User implements Serializable {
 
@@ -31,6 +31,8 @@ public class User implements Serializable {
     @Column(name="password", nullable = false, length = 20)
     private String password;
 
+    @Column(name="token", nullable = false, length = 20)
+    private String token;
 
 
     public int getUserID() {
@@ -64,5 +66,13 @@ public class User implements Serializable {
     }
 
     public User() {
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

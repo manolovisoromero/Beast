@@ -1,3 +1,5 @@
+package REST_calls;
+
 public class ChangePassRequest {
 
     public String getUsername() {

@@ -1,11 +1,10 @@
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.StreamingOutput;
 
+import REST_calls.ChangePassRequest;
+import REST_calls.RegisterRequest;
 import com.google.gson.Gson;
-import com.google.gson.internal.bind.util.ISO8601Utils;
-import org.w3c.dom.ls.LSOutput;
 
 
 @Path("/login")
@@ -61,5 +60,31 @@ public class LoginEndpoint {
         System.out.println(changePassRequest);
         return Response.status(200).entity(machine.changePassword(changePassRequest)).build();
     }
+
+    @GET
+    @Path("/Game")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getGame(
+            ){
+        return Response.ok() //200
+                .entity(machine.getGame())
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS").build();
+    }
+
+    @POST
+    @Path("/Check-Auth")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response authCheck(){
+
+        return null;
+
+    }
+
+
+
 
 }
