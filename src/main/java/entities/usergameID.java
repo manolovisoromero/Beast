@@ -1,8 +1,6 @@
-package Entities;
+package entities;
 
 import javax.persistence.*;
-
-import org.hibernate.annotations.OptimisticLockType;
 
 import java.io.Serializable;
 

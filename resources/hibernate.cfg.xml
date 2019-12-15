@@ -10,10 +10,10 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="Employee"></mapping>
-        <mapping class="Entities.usergame"></mapping>
-        <mapping class="Entities.User"></mapping>
-        <mapping class="Entities.Game"></mapping>
+        <mapping class="logic.Employee"></mapping>
+        <mapping class="entities.usergame"></mapping>
+        <mapping class="entities.User"></mapping>
+        <mapping class="entities.Game"></mapping>
 
 
 

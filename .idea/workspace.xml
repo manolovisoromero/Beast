@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/auth.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Authentication/CallbackHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Authentication/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Authentication/auth.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/GameXY.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GameField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GameHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/REST_calls/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/REST_calls/GetGame.java" afterDir="false" />
+    <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="Filter werkt, met authentication voorbeeld">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Beast_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Beast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Beast.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChangePassRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/REST_calls/ChangePassRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/usergame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/usergame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Machine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/REST_calls/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LoginEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/CallbackHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/Driver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/auth.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/GameXY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/GameXY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/usergame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/usergame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/usergameID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/usergameID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,22 +60,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LoginEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+            <state relative-caret-position="85">
+              <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,65 +72,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java">
+        <entry file="file://$PROJECT_DIR$/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="204">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/AuthenticationRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#122#123#0" expanded="true" />
+                <element signature="e#170#171#0" expanded="true" />
+                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationFilter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/libraries/jetty_alpn_server_9_4_20_v20190813.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="84" column="41" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/ChangePassRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Entities/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="31">
               <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -150,10 +111,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Machine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
+            <state relative-caret-position="187">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#0#9#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthorizationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/usergameID.java" />
         <option value="$PROJECT_DIR$/src/main/java/User.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/RegisterRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/user.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChangePassRequest.java" />
@@ -220,11 +217,21 @@
         <option value="$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/Machine.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST_calls/AuthenticationRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/LoginEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Endpoints/LoginEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Endpoints/AuthenticationEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/endpoints/AuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/Machine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java" />
       </list>
     </option>
   </component>
@@ -235,7 +242,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="952" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
@@ -247,8 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,23 +269,6 @@
             <path>
               <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
               <item name="Beast" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Beast" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Beast" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Beast" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,7 +290,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="endpoints" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
@@ -310,7 +298,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
@@ -327,12 +315,25 @@
             </path>
             <path>
               <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,13 +363,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\java\Endpoints" />
+      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\Endpoints" />
       <recent name="C:\Users\Manol\IdeaProjects\Beast\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Manol\IdeaProjects\Beast\resources" />
     </key>
   </component>
@@ -399,14 +402,14 @@
       </method>
     </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
+      <option name="MAIN_CLASS_NAME" value="logic.Server" />
       <module name="Beast" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="logic.Test" />
       <module name="Beast" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -414,8 +417,8 @@
     </configuration>
     <configuration name="GameHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Beast" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameHandlerTest" />
+      <option name="PACKAGE_NAME" value="logic" />
+      <option name="MAIN_CLASS_NAME" value="logic.GameHandlerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -462,7 +465,13 @@
       <workItem from="1574863085023" duration="10300000" />
       <workItem from="1574938474759" duration="11958000" />
       <workItem from="1575028186344" duration="3090000" />
-      <workItem from="1575202122890" duration="15990000" />
+      <workItem from="1575202122890" duration="17158000" />
+      <workItem from="1575312877141" duration="6576000" />
+      <workItem from="1575832910865" duration="599000" />
+      <workItem from="1575923940253" duration="607000" />
+      <workItem from="1576263961018" duration="3166000" />
+      <workItem from="1576325498457" duration="7247000" />
+      <workItem from="1576409219386" duration="6455000" />
     </task>
     <task id="LOCAL-00001" summary="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER">
       <created>1574363228038</created>
@@ -478,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574629330407</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="filters werken nog niet">
+      <created>1575235787356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575235787356</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -514,12 +530,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78707000" />
+    <option name="totallyTimeSpent" value="104525000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="952" y="-8" width="976" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24563318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -527,10 +544,11 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Persistence" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.22101842" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Messages" order="3" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32922733" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32827735" />
@@ -552,6 +570,41 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14232409" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Persistence" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.22101842" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32922733" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32827735" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.2881907" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -605,58 +658,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER" />
     <MESSAGE value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
+    <MESSAGE value="filters werken nog niet" />
+    <MESSAGE value="Filter werkt, met authentication voorbeeld" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter werkt, met authentication voorbeeld" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/TestSystem.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Message.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/GetGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -667,17 +675,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1c802b51-6b77-4199-be7b-3622d8266e86/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/usergameID.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/usergameID.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
@@ -687,7 +685,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/GameXY.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/GameXY.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
@@ -697,7 +695,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
@@ -714,14 +712,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/usergame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/usergame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
@@ -732,13 +723,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Authentication.java" />
     <entry file="file://$PROJECT_DIR$/resources/auth.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -773,6 +758,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/RegisterRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/jetty_alpn_server_9_4_20_v20190813.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/ChangePassRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/ws/rs/javax.ws.rs-api/2.1/javax.ws.rs-api-2.1.jar!/javax/ws/rs/Path.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/GameField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/GameHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/GameHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Machine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#9#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthorizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/AuthenticationRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -789,105 +954,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Machine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1595">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#9#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/ChangePassRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/RegisterRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LoginEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/jetty_alpn_server_9_4_20_v20190813.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" column="41" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>

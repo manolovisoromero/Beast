@@ -1,6 +1,6 @@
+package logic;
 
-
-import REST_calls.RegisterRequest;
+import endpoints.AuthorizationFilter;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.HttpConfiguration;
 import org.eclipse.jetty.server.SecureRequestCustomizer;
@@ -9,7 +9,9 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.glassfish.jersey.servlet.ServletContainer;
-import com.google.gson.Gson;
+
+import javax.servlet.DispatcherType;
+import java.util.EnumSet;
 
 
 public class Server {
@@ -34,14 +36,12 @@ public class Server {
 
         server.setConnectors(new Connector[]{ serverConnector, sslConnector});
 
-        RegisterRequest registerRequest = new RegisterRequest();
-        Gson g = new Gson();
-        registerRequest.setUsername("sss");
-        registerRequest.setPassword("2333");
-        System.out.println(g.toJson(registerRequest));
+
+//        server.setHandler(getJerseyHandler());
 
 
         server.setHandler(getJerseyHandler());
+        //Multiple handlers
 
         server.start();
         server.join();
@@ -53,15 +53,18 @@ public class Server {
 
         handler.setContextPath("/");
 
+        //handler.addFilter(AuthorizationFilter.class, "/*", EnumSet.of(DispatcherType.INCLUDE,DispatcherType.REQUEST));
+
         ServletHolder servletHolder = handler.addServlet(ServletContainer.class, "/*");
         servletHolder.setInitOrder(0);
-        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
-                LoginEndpoint.class.getCanonicalName());
-        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
-                AuthenticationEndpoint.class.getCanonicalName());
+        servletHolder.setInitParameter("jersey.config.server.provider.packages", "endpoints"
+                );
+
 
         return handler;
     }
+
+
 }
 
 

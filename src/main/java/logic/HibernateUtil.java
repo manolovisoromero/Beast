@@ -1,3 +1,5 @@
+package logic;
+
 import java.io.File;
 
 import org.hibernate.SessionFactory;
