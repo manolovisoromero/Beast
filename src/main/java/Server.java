@@ -24,7 +24,7 @@ public class Server {
         https.addCustomizer(new SecureRequestCustomizer());
 
         SslContextFactory sslContextFactory = new SslContextFactory();
-        sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/manolo.pkcs12");
+        sslContextFactory.setKeyStorePath("C:/Users/manolo/IdeaProjects/Boodschappenlijst/ssl/jcg.pkcs12");
         sslContextFactory.setKeyStorePassword("manolo");
 
         org.eclipse.jetty.server.ServerConnector sslConnector = new org.eclipse.jetty.server.ServerConnector(server,
@@ -59,6 +59,8 @@ public class Server {
                 LoginEndpoint.class.getCanonicalName());
         servletHolder.setInitParameter("jersey.config.server.provider.classnames",
                 AuthenticationEndpoint.class.getCanonicalName());
+        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
+                AuthenticationFilter.class.getCanonicalName());
 
         return handler;
     }

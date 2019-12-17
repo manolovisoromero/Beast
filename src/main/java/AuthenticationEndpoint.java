@@ -34,32 +34,74 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 public class AuthenticationEndpoint {
 
     Machine machine = Machine.getInstance();
+    String tokenn;
 
     @NameBinding
     @Retention(RUNTIME)
     @Target({TYPE, METHOD})
     public @interface Secured { }
 
+    @GET
+    @Path("/test")
+    @Secured
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response test(
+
+            ){
+        if(true){
+            return Response.status(Response.Status.OK) //200
+                    .entity("Hoi")
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS").build();
+    }
+        else{
+            return Response.status(Response.Status.FORBIDDEN) //200
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS").build();
+        }
+    }
+
+
+    @GET
+    @Path("/tryy")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response tryy(
+    ){
+
+            return Response.status(Response.Status.OK) //200
+                    .entity("Hoi")
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS").build();
+
+    }
+
+
 
 
     @POST
     @Path("/authenticate")
-    @Secured
+//    @Secured
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response authenticateUser(
             AuthenticationRequest authenticationRequest){
-        try{
-            User user = match(authenticationRequest);
+        System.out.println(authenticationRequest);
 
+
+        if(authenticationRequest.getUsername().equals("Test")) {
 
 
             return Response.ok() //200
-                    .entity(user.getToken())
+                    .entity(issueToken())
                     .header("Access-Control-Allow-Origin", "*")
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                     .allow("OPTIONS").build();
-        } catch (Exception e) {
+        }else{
             return Response.status(Response.Status.FORBIDDEN) //200
                     .header("Access-Control-Allow-Origin", "*")
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
@@ -67,7 +109,17 @@ public class AuthenticationEndpoint {
         }
 
 
+
+
+
     }
+
+    @GET
+    public Response Default(){
+        return Response.ok().entity("ok").build();
+    }
+
+
 
 
 
@@ -109,7 +161,7 @@ public class AuthenticationEndpoint {
         boolean useLetters = true;
         boolean useNumbers = false;
         String token = RandomStringUtils.random(length, useLetters, useNumbers);
-
+        tokenn = token;
         System.out.println(token);
 
         return token;
