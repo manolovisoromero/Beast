@@ -2,18 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Boodschappenlijst_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Beast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Beast.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boodschappenlijst.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Boodschappenlijst.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/CallbackHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/Driver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/LoginModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication/auth.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/GameXY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/GameXY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/usergame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/usergame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/usergameID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/usergameID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +79,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -70,7 +86,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/advanced-jaxrs-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,7 +95,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -89,13 +105,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Manol\IdeaProjects\Beast\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\java\Endpoints" />
+      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\Endpoints" />
       <recent name="C:\Users\Manol\IdeaProjects\Beast\resources" />
     </key>
   </component>
@@ -126,14 +144,14 @@
       </method>
     </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
-      <module name="Boodschappenlijst" />
+      <option name="MAIN_CLASS_NAME" value="logic.Server" />
+      <module name="Beast" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="logic.Test" />
       <module name="Beast" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,8 +159,8 @@
     </configuration>
     <configuration name="GameHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Beast" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameHandlerTest" />
+      <option name="PACKAGE_NAME" value="logic" />
+      <option name="MAIN_CLASS_NAME" value="logic.GameHandlerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,9 +207,13 @@
       <workItem from="1574863085023" duration="10300000" />
       <workItem from="1574938474759" duration="11958000" />
       <workItem from="1575028186344" duration="3090000" />
-      <workItem from="1575202122890" duration="15990000" />
-      <workItem from="1575364897938" duration="4310000" />
-      <workItem from="1575976398521" duration="5604000" />
+      <workItem from="1575202122890" duration="17158000" />
+      <workItem from="1575312877141" duration="6576000" />
+      <workItem from="1575832910865" duration="599000" />
+      <workItem from="1575923940253" duration="607000" />
+      <workItem from="1576263961018" duration="3166000" />
+      <workItem from="1576325498457" duration="7247000" />
+      <workItem from="1576409219386" duration="6455000" />
     </task>
     <task id="LOCAL-00001" summary="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER">
       <created>1574363228038</created>
@@ -207,7 +229,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574629330407</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="filters werken nog niet">
+      <created>1575235787356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575235787356</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Filter werkt, met authentication voorbeeld">
+      <created>1576587410882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576587410882</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -286,9 +322,86 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER" />
     <MESSAGE value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
+    <MESSAGE value="filters werken nog niet" />
+    <MESSAGE value="Filter werkt, met authentication voorbeeld" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/manolovisoromero/Beast&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/endpoints/AuthenticationEndpoint.java&#10;&#9;src/main/java/endpoints/AuthenticationFilter.java&#10;&#9;src/main/java/entities/Game.java&#10;&#9;src/main/java/logic/Server.java&#10;&#9;target/classes/Server.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/manolovisoromero/Beast&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/endpoints/AuthenticationEndpoint.java&#10;&#9;src/main/java/endpoints/AuthenticationFilter.java&#10;&#9;src/main/java/entities/Game.java&#10;&#9;src/main/java/logic/Server.java&#10;&#9;target/classes/Server.class" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Beast</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jetty-alpn-server-9.4.20.v20190813</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

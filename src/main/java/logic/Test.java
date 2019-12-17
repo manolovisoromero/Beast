@@ -1,12 +1,11 @@
-import org.hibernate.Criteria;
+package logic;
+
 import org.hibernate.Session;
 import org.hibernate.Query;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import Entities.*;
-import org.hibernate.criterion.Restrictions;
+import entities.*;
 
 
 public class Test {
@@ -15,8 +14,8 @@ public class Test {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
-        // Add new Employee object
-//        Employee emp = new Employee();
+        // Add new logic.Employee object
+//        logic.Employee emp = new logic.Employee();
 //        emp.setEmail("demo-User@mail.com");
 //        emp.setFirstName("demo");
 //        emp.setLastName("User");
@@ -91,10 +90,10 @@ public class Test {
 //
 //
 //        // Get employees
-//        Query query = session.createQuery("from Employee");
-//        List<Employee> employees = query.list();
+//        Query query = session.createQuery("from logic.Employee");
+//        List<logic.Employee> employees = query.list();
 //
-//        for(Employee employee: employees){
+//        for(logic.Employee employee: employees){
 //            System.out.println(employee);
 //        }
 //
@@ -105,10 +104,10 @@ public class Test {
 //            System.out.println("usergame: "+userGame1);
 //        }
 //
-//        // Get Employee
+//        // Get logic.Employee
 //
-//        Employee employe;
-//        employe = (Employee) session.get(Employee.class, 1) ;
+//        logic.Employee employe;
+//        employe = (logic.Employee) session.get(logic.Employee.class, 1) ;
 //        System.out.println("employe: "+ employe.getEmployeeId());
 //
 //        usergame usergame1;
@@ -120,8 +119,8 @@ public class Test {
 //        employe.setFirstName("Sjaakkk");
 //        session.update(employe);
 //
-//        Employee employe1;
-//        employe1 = (Employee) session.get(Employee.class, 1) ;
+//        logic.Employee employe1;
+//        employe1 = (logic.Employee) session.get(logic.Employee.class, 1) ;
 //        System.out.println("employe1: "+ employe1.getFirstName());
 //
 

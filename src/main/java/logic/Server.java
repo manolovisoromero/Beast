@@ -1,6 +1,5 @@
+package logic;
 
-
-import REST_calls.RegisterRequest;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.HttpConfiguration;
 import org.eclipse.jetty.server.SecureRequestCustomizer;
@@ -9,7 +8,6 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.glassfish.jersey.servlet.ServletContainer;
-import com.google.gson.Gson;
 
 
 public class Server {
@@ -23,23 +21,17 @@ public class Server {
         HttpConfiguration https = new HttpConfiguration();
         https.addCustomizer(new SecureRequestCustomizer());
 
+        //Https
+
         SslContextFactory sslContextFactory = new SslContextFactory();
-        sslContextFactory.setKeyStorePath("C:/Users/manolo/IdeaProjects/Boodschappenlijst/ssl/jcg.pkcs12");
+        sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/manolo.pkcs12");
         sslContextFactory.setKeyStorePassword("manolo");
 
         org.eclipse.jetty.server.ServerConnector sslConnector = new org.eclipse.jetty.server.ServerConnector(server,
                 new SslConnectionFactory(sslContextFactory, "http/1.1"),
                 new HttpConnectionFactory(https));
         sslConnector.setPort(8095);
-
         server.setConnectors(new Connector[]{ serverConnector, sslConnector});
-
-        RegisterRequest registerRequest = new RegisterRequest();
-        Gson g = new Gson();
-        registerRequest.setUsername("sss");
-        registerRequest.setPassword("2333");
-        System.out.println(g.toJson(registerRequest));
-
 
         server.setHandler(getJerseyHandler());
 
@@ -53,17 +45,17 @@ public class Server {
 
         handler.setContextPath("/");
 
+
         ServletHolder servletHolder = handler.addServlet(ServletContainer.class, "/*");
         servletHolder.setInitOrder(0);
-        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
-                LoginEndpoint.class.getCanonicalName());
-        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
-                AuthenticationEndpoint.class.getCanonicalName());
-        servletHolder.setInitParameter("jersey.config.server.provider.classnames",
-                AuthenticationFilter.class.getCanonicalName());
+        servletHolder.setInitParameter("jersey.config.server.provider.packages", "endpoints"
+                );
+
 
         return handler;
     }
+
+
 }
 
 

@@ -1,3 +1,5 @@
+package endpoints;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -5,6 +7,8 @@ import javax.ws.rs.core.Response;
 import REST_calls.ChangePassRequest;
 import REST_calls.RegisterRequest;
 import com.google.gson.Gson;
+import logic.Machine;
+import logic.Message;
 
 
 @Path("/login")

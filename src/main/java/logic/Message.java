@@ -1,3 +1,5 @@
+package logic;
+
 public class Message {
 
     public Message(String name){

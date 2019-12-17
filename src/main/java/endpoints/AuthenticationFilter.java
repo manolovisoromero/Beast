@@ -1,19 +1,19 @@
+package endpoints;
+
 import javax.annotation.Priority;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.PreMatching;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
-@AuthenticationEndpoint.Secured
+
+@endpoints.AuthenticationEndpoint.Secured
 @Provider
-//@PreMatching
 @Priority(Priorities.AUTHENTICATION)
 public class AuthenticationFilter implements ContainerRequestFilter {
-
 
     private static final String REALM = "example";
     private static final String AUTHENTICATION_SCHEME = "Bearer";
@@ -21,32 +21,10 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
 
+        System.out.println("requestcontext: "+requestContext);
 
-        System.out.println("bap");
+        System.out.println("Filter");
 
-
-//        // Get the Authorization header from the request
-//        String authorizationHeader =
-//                requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-//
-//        // Validate the Authorization header
-//        if (!isTokenBasedAuthentication(authorizationHeader)) {
-//            abortWithUnauthorized(requestContext);
-//            return;
-//        }
-//
-//        // Extract the token from the Authorization header
-//        String token = authorizationHeader
-//                .substring(AUTHENTICATION_SCHEME.length()).trim();
-//
-//        try {
-//
-//            // Validate the token
-//            validateToken(token);
-//
-//        } catch (Exception e) {
-//            abortWithUnauthorized(requestContext);
-//        }
     }
 
     private boolean isTokenBasedAuthentication(String authorizationHeader) {
@@ -72,5 +50,6 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     private void validateToken(String token) throws Exception {
         // Check if the token was issued by the server and if it's not expired
         // Throw an Exception if the token is invalid
+        System.out.println("bap");
     }
 }

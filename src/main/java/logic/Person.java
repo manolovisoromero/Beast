@@ -1,3 +1,5 @@
+package logic;
+
 public class Person {
 
     public String Name;

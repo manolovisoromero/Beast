@@ -1,3 +1,5 @@
+package logic;
+
 import org.hibernate.annotations.OptimisticLockType;
 
 import java.io.Serializable;

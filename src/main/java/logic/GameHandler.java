@@ -1,6 +1,6 @@
-import Entities.User;
+package logic;
 
-import java.util.ArrayList;
+import entities.User;
 
 public class GameHandler {
 

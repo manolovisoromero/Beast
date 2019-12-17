@@ -1,3 +1,5 @@
+package logic;
+
 import java.util.ArrayList;
 
 import REST_calls.ChangePassRequest;
@@ -8,7 +10,7 @@ import org.hibernate.Query;
 
 import java.util.List;
 
-import Entities.*;
+import entities.*;
 
 
 
@@ -16,6 +18,8 @@ public class Machine {
 
 
     Gson gson = new Gson();
+
+    public String testtoken;
 
 
 
