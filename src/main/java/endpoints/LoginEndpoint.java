@@ -5,6 +5,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import REST_calls.ChangePassRequest;
+import REST_calls.LoginRequest;
 import REST_calls.RegisterRequest;
 import com.google.gson.Gson;
 import logic.Machine;
@@ -45,14 +46,34 @@ public class LoginEndpoint {
     }
 
 
+    @Path("/API/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    @POST
+    public Response loginUser(
+            LoginRequest loginRequest){
+        return Response.status(200).entity(machine.loginUser(loginRequest.getUsername(),loginRequest.getPassword()))
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS")
+                .build();
+
+
+    }
+
+
+
     @POST
     @Path("/registerUser")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public Response registerUser(
             RegisterRequest registerRequest){
-        System.out.println(registerRequest);
-        return Response.status(200).entity(machine.registerUser(registerRequest)).build();
+        return Response.status(200).entity(machine.registerUser(registerRequest))
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS")
+                .build();
     }
 
     @PUT
@@ -61,8 +82,11 @@ public class LoginEndpoint {
     @Produces(MediaType.TEXT_PLAIN)
     public Response changePassword(
             ChangePassRequest changePassRequest){
-        System.out.println(changePassRequest);
-        return Response.status(200).entity(machine.changePassword(changePassRequest)).build();
+        return Response.status(200).entity(machine.changePassword(changePassRequest))
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS")
+                .build();
     }
 
     @GET

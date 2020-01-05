@@ -9,12 +9,12 @@ import java.io.Serializable;
 
 @Entity
 @org.hibernate.annotations.Entity(optimisticLock = OptimisticLockType.ALL, dynamicUpdate = true)
-@Table(name = "usergame", uniqueConstraints = {
+@Table(name = "Usergame", uniqueConstraints = {
         @UniqueConstraint(columnNames = "gameID"),
         @UniqueConstraint(columnNames = "userID")})
-public class usergame implements Serializable {
+public class Usergame implements Serializable {
 
-    public usergame() {
+    public Usergame() {
     }
 
 

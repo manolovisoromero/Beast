@@ -10,7 +10,7 @@ import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
 
-@endpoints.AuthenticationEndpoint.Secured
+@AuthenticationEndpoint.Secured
 @Provider
 @Priority(Priorities.AUTHENTICATION)
 public class AuthenticationFilter implements ContainerRequestFilter {
@@ -21,9 +21,32 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
 
-        System.out.println("requestcontext: "+requestContext);
-
         System.out.println("Filter");
+
+        String authorizationHeader =
+                requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+
+        if (!isTokenBasedAuthentication(authorizationHeader)) {
+            abortWithUnauthorized(requestContext);
+            return;
+        }
+
+        // Extract the token from the Authorization header
+        String token = authorizationHeader
+                .substring(AUTHENTICATION_SCHEME.length()).trim();
+
+        try {
+
+            // Validate the token
+            validateToken(token);
+
+        } catch (Exception e) {
+            abortWithUnauthorized(requestContext);
+        }
+
+
+
+        System.out.println("Filter end");
 
     }
 
@@ -48,8 +71,11 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     }
 
     private void validateToken(String token) throws Exception {
+        System.out.println("validation");
         // Check if the token was issued by the server and if it's not expired
         // Throw an Exception if the token is invalid
-        System.out.println("bap");
+        if(!token.equals("test")){
+            throw new Exception();
+        }
     }
 }

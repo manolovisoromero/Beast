@@ -4,6 +4,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import REST_calls.LoginRequest;
 import entities.User;
 import REST_calls.AuthenticationRequest;
 import logic.HibernateUtil;
@@ -40,7 +41,6 @@ public class AuthenticationEndpoint {
 
     @POST
     @Path("/authenticate")
-    @Secured
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response authenticateUser(
@@ -60,6 +60,21 @@ public class AuthenticationEndpoint {
         }
     }
 
+    @POST
+    @Path("/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+
+    public Response loginUser(
+            LoginRequest loginRequest){
+        return Response.status(200).entity(machine.loginUser(loginRequest.getUsername(),loginRequest.getPassword()))
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS")
+                .build();
+
+
+    }
 
 
     @GET

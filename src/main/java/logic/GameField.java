@@ -8,6 +8,10 @@ public class GameField {
     private int[][] UpperLabels = new int[5][5];
     private int[][] LeftLabels = new int[5][5];
 
+    public GameField() {
+
+    }
+
 
     public boolean[][] getPlayfield() {
         return Playfield;
