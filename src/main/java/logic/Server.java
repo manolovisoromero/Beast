@@ -1,6 +1,5 @@
 package logic;
 
-import endpoints.AuthorizationFilter;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.HttpConfiguration;
 import org.eclipse.jetty.server.SecureRequestCustomizer;
@@ -9,9 +8,6 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.glassfish.jersey.servlet.ServletContainer;
-
-import javax.servlet.DispatcherType;
-import java.util.EnumSet;
 
 
 public class Server {
@@ -25,6 +21,8 @@ public class Server {
         HttpConfiguration https = new HttpConfiguration();
         https.addCustomizer(new SecureRequestCustomizer());
 
+        //Https
+
         SslContextFactory sslContextFactory = new SslContextFactory();
         sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/manolo.pkcs12");
         sslContextFactory.setKeyStorePassword("manolo");
@@ -33,15 +31,9 @@ public class Server {
                 new SslConnectionFactory(sslContextFactory, "http/1.1"),
                 new HttpConnectionFactory(https));
         sslConnector.setPort(8095);
-
         server.setConnectors(new Connector[]{ serverConnector, sslConnector});
 
-
-//        server.setHandler(getJerseyHandler());
-
-
         server.setHandler(getJerseyHandler());
-        //Multiple handlers
 
         server.start();
         server.join();
@@ -53,7 +45,6 @@ public class Server {
 
         handler.setContextPath("/");
 
-        //handler.addFilter(AuthorizationFilter.class, "/*", EnumSet.of(DispatcherType.INCLUDE,DispatcherType.REQUEST));
 
         ServletHolder servletHolder = handler.addServlet(ServletContainer.class, "/*");
         servletHolder.setInitOrder(0);
