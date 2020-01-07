@@ -11,9 +11,11 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
         <mapping class="logic.Employee"></mapping>
-        <mapping class="entities.usergame"></mapping>
+        <mapping class="entities.Usergame"></mapping>
         <mapping class="entities.User"></mapping>
         <mapping class="entities.Game"></mapping>
+        <mapping class="entities.Note"></mapping>
+
 
 
 

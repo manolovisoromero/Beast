@@ -11,8 +11,13 @@ import entities.*;
 public class Test {
 
     public static void main(String[] args) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+//        Session session = HibernateUtil.getSessionFactory().openSession();
+//        session.beginTransaction();
+
+        //Machine.getInstance().updateNote(2,"updated 2");
+        System.out.println(Machine.getInstance().getUnplayedGame(1));
+
+
 
         // Add new logic.Employee object
 //        logic.Employee emp = new logic.Employee();
@@ -23,6 +28,13 @@ public class Test {
 //
 //        session.save(emp);
 
+
+//        entities.Note note = new Note();
+//        note.setContent("hallo 9");
+//        note.setUserID(1);
+//        session.save(note);
+
+
         boolean [][] gamer = new boolean[][]{
                 new boolean[]{true,true,false,false,false},
                 new boolean[]{true,true,false,true,true},
@@ -32,19 +44,19 @@ public class Test {
         };
 
 
-//        Query query = session.createQuery("from usergame");
-//        List<usergame> usergames = query.list();
+//        Query query = session.createQuery("from Usergame");
+//        List<Usergame> usergames = query.list();
 //
 //
 //        Query query1 = session.createQuery("from Game");
 //        List<Game> games = query1.list();
 //
 //        int indexer = 0;
-//        for(usergame usergame: usergames){
-//            if(usergame.getUsergameid().getUserID() == 3){
+//        for(Usergame Usergame: usergames){
+//            if(Usergame.getUsergameid().getUserID() == 3){
 //
 //                for(Game game: games){
-//                    if(game.getGameXY().getGameID() != usergame.getUsergameid().getGameID()){
+//                    if(game.getGameXY().getGameID() != Usergame.getUsergameid().getGameID()){
 //                        indexer = game.getGameXY().getGameID();
 //                    }
 //                }
@@ -58,10 +70,11 @@ public class Test {
 //        }
 
 
-        Query queryy = session.createQuery("SELECT usergameid.gameID FROM usergame  WHERE usergameid.userID =:cid ");
-        queryy.setParameter("cid", 1);
-        ArrayList<usergame> usergames1 =  (ArrayList<usergame>) queryy.list();
-        System.out.println(usergames1);
+//         Query queryy = session.createQuery("SELECT usergameid.gameID FROM Usergame  WHERE usergameid.userID =:cid ");
+//        queryy.setParameter("cid", 1);
+//        ArrayList<Usergame> usergames1 =  (ArrayList<Usergame>) queryy.list();
+//        System.out.println(usergames1);
+
 
 
 //        for(int x = 0;x < gamer.length; x++){
@@ -74,7 +87,7 @@ public class Test {
 //
 
 //
-////        usergame userGame = new usergame();
+////        Usergame userGame = new Usergame();
 ////        usergameID usergameid = new usergameID(3,3);
 ////        userGame.setUsergameid(usergameid);
 ////        userGame.setWin(false);
@@ -97,11 +110,11 @@ public class Test {
 //            System.out.println(employee);
 //        }
 //
-//        Criteria crit = session.createCriteria(usergame.class);
+//        Criteria crit = session.createCriteria(Usergame.class);
 //        crit.add(Restrictions.eq("usergameid.gameID",1));
-//        List<usergame> results = crit.list();
-//        for( usergame userGame1: results){
-//            System.out.println("usergame: "+userGame1);
+//        List<Usergame> results = crit.list();
+//        for( Usergame userGame1: results){
+//            System.out.println("Usergame: "+userGame1);
 //        }
 //
 //        // Get logic.Employee
@@ -110,9 +123,9 @@ public class Test {
 //        employe = (logic.Employee) session.get(logic.Employee.class, 1) ;
 //        System.out.println("employe: "+ employe.getEmployeeId());
 //
-//        usergame usergame1;
+//        Usergame usergame1;
 //        usergameID usergameID1 = new usergameID(1,1);
-//        usergame1 = (usergame) session.get(usergame.class, usergameID1);
+//        usergame1 = (Usergame) session.get(Usergame.class, usergameID1);
 //
 //
 //        // Update
@@ -126,9 +139,9 @@ public class Test {
 
 
 
-
-        session.getTransaction().commit();
-        HibernateUtil.shutdown();
+//
+//        session.getTransaction().commit();
+//        HibernateUtil.shutdown();
 
 
 
