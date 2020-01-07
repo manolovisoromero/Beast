@@ -70,6 +70,7 @@ public class AuthenticationEndpoint {
         return Response.status(200).entity(machine.loginUser(loginRequest.getUsername(),loginRequest.getPassword()))
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .header("Content-Type", "application/json")
                 .allow("OPTIONS")
                 .build();
 

@@ -20,12 +20,8 @@ public class Machine {
 
 
     Gson gson = new Gson();
+    GameHandler gameHandler = GameHandler.getInstance();
 
-    public String testtoken;
-
-
-
-    public ArrayList<Person> persons = new ArrayList<>();
     private static Machine machine = new Machine();
     private Machine(){}
 
@@ -172,14 +168,16 @@ public class Machine {
             ArrayList<Game> persongames = (ArrayList<Game>) queryGame.list();
 
 
-            GameField gameField = new GameField();
             boolean [][] data = new boolean[5][5];
 
             for(Game gamer: persongames){
                 data[gamer.getGameXY().getX()][gamer.getGameXY().getY()] = gamer.getValue();
             }
 
-            gameField.setPlayfield(data);
+
+            GameField gameField = gameHandler.createLabels(data);
+
+
             session.close();
             HibernateUtil.shutdown();
 

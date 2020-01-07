@@ -21,9 +21,50 @@ public class GameHandler {
     public User getUser() {return user;}
     public void setUser(User user) {this.user = user;}
 
-    public void createLabels(boolean[][] game){
-        int [][] upper = new int[5][5];
+    public GameField createLabels(boolean[][] game){
+        GameField gameField = new GameField();
+        gameField.setLeftLabels( leftLabels(game));
+        gameField.setUpperLabels(upperLabels(game));
+
+        return gameField;
+
+    }
+
+    public int [][] leftLabels(boolean [][] game){
         int [][] left = new int [5][5];
+        int counter = 0;
+
+        for(int i = 0; i < 5; i++){
+            for(int j = 4; j >= 0;j--){
+                if(game[i][j]){
+                    counter++;
+                }else{
+                    for(int a = 4; a >= 0; a--){
+                        if(left[i][a] == 0 ){
+                            left[i][a] = counter;
+                            counter = 0;
+                        }
+                    }
+                    left[i][j] = counter;
+                    counter = 0;
+                }
+                if(j == 0 && counter > 0){
+                    for(int a = 4; a >= 0; a--){
+                        if(left[i][a] == 0 ){
+                            left[i][a] = counter;
+                            counter = 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        return left;
+    }
+
+    private int [][] upperLabels(boolean [][]game){
+        int [][] upper = new int [5][5];
         int counter = 0;
 
         for(int j = 0; j < 5; j++){
@@ -46,13 +87,10 @@ public class GameHandler {
                             upper[a][j] = counter;
                             counter = 0;
                         }
-
                     }
-
                 }
+            }
         }
-        }
-        gameField = new GameField();
-        gameField.setUpperLabels(upper);
+        return upper;
     }
 }
