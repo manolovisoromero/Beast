@@ -15,7 +15,7 @@ public class Test {
 //        session.beginTransaction();
 
         //Machine.getInstance().updateNote(2,"updated 2");
-        System.out.println(Machine.getInstance().getUnplayedGame(1));
+        //System.out.println(Machine.getInstance().getUnplayedGame(1));
 
 
 
