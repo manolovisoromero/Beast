@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import REST_calls.ChangePassRequest;
 import REST_calls.RegisterRequest;
+import REST_calls.ReturnMsg;
 import com.google.gson.Gson;
 import org.hibernate.Session;
 import org.hibernate.Query;
@@ -14,18 +15,15 @@ import java.util.Random;
 
 import entities.*;
 
+import javax.ws.rs.core.Response;
 
 
 public class Machine {
 
 
     Gson gson = new Gson();
+    GameHandler gameHandler = GameHandler.getInstance();
 
-    public String testtoken;
-
-
-
-    public ArrayList<Person> persons = new ArrayList<>();
     private static Machine machine = new Machine();
     private Machine(){}
 
@@ -86,7 +84,7 @@ public class Machine {
         return " Password change failed.";
     }
 
-    public String loginUser(String username, String password){
+    public Response loginUser(String username, String password){
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
@@ -101,13 +99,29 @@ public class Machine {
                 String token = generateToken();
                 user.setToken(token);
                 session.update(user);
-                return token;
+                ReturnMsg returnMsg = new ReturnMsg();
+                returnMsg.setToken(user.getToken());
+                returnMsg.setUserID(user.getUserID());
+                return Response.status(202)
+                        .entity(gson.toJson(returnMsg))
+                        .header("Access-Control-Allow-Origin", "*")
+                        .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                        .allow("OPTIONS")
+                        .build();
             }
-            return "Credentials invalid";
+            return Response.status(400)
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS")
+                    .build();
 
         }catch(Exception e){
             System.out.println(e.getMessage());
-            return null;
+            return Response.status(400)
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS")
+                    .build();
         }finally{
             session.close();
             HibernateUtil.shutdown();
@@ -121,6 +135,11 @@ public class Machine {
     }
 
 
+
+    private User getUser(String username){
+        return null;
+
+    }
 
     /*
     CRUD for Game
@@ -172,14 +191,16 @@ public class Machine {
             ArrayList<Game> persongames = (ArrayList<Game>) queryGame.list();
 
 
-            GameField gameField = new GameField();
             boolean [][] data = new boolean[5][5];
 
             for(Game gamer: persongames){
                 data[gamer.getGameXY().getX()][gamer.getGameXY().getY()] = gamer.getValue();
             }
 
-            gameField.setPlayfield(data);
+
+            GameField gameField = gameHandler.createLabels(data);
+
+
             session.close();
             HibernateUtil.shutdown();
 

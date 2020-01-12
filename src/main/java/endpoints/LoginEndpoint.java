@@ -33,17 +33,6 @@ public class LoginEndpoint {
                 .allow("OPTIONS").build();
     }
 
-    @Path("/hello/all")
-    @Produces(MediaType.TEXT_PLAIN)
-    @GET
-    public Response getPersons( ){
-        System.out.println(g.toJson(machine.persons));
-        return Response.ok() //200
-                .entity(g.toJson(machine.persons))
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                .allow("OPTIONS").build();
-    }
 
 
     @Path("/API/login")
