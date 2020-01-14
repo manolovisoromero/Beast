@@ -6,7 +6,6 @@ public class GameHandler {
 
     private User user;
 
-    public GameField gameField;
 
 
 
@@ -23,8 +22,9 @@ public class GameHandler {
 
     public GameField createLabels(boolean[][] game){
         GameField gameField = new GameField();
-        gameField.setLeftLabels( leftLabels(game));
+        gameField.setLeftLabels(leftLabels(game));
         gameField.setUpperLabels(upperLabels(game));
+        gameField.setPlayfield(game);
 
         return gameField;
 
@@ -63,7 +63,7 @@ public class GameHandler {
         return left;
     }
 
-    private int [][] upperLabels(boolean [][]game){
+    public int [][] upperLabels(boolean [][]game){
         int [][] upper = new int [5][5];
         int counter = 0;
 
@@ -92,5 +92,6 @@ public class GameHandler {
             }
         }
         return upper;
+
     }
 }

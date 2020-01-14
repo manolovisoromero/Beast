@@ -1,10 +1,12 @@
 package endpoints;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import REST_calls.LoginRequest;
+import com.google.gson.Gson;
 import entities.User;
 import REST_calls.AuthenticationRequest;
 import logic.HibernateUtil;
@@ -30,6 +32,8 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 public class AuthenticationEndpoint {
 
     Machine machine = Machine.getInstance();
+    Gson gson = new Gson();
+
 
 
     @NameBinding
@@ -45,12 +49,14 @@ public class AuthenticationEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response authenticateUser(
             AuthenticationRequest authenticationRequest){
+
+        System.out.println("user"+authenticationRequest.getUsername());
         try{
             User user = match(authenticationRequest);
             return Response.ok() //200
                     .entity(user.getToken())
                     .header("Access-Control-Allow-Origin", "*")
-                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT")
                     .allow("OPTIONS").build();
         } catch (Exception e) {
             return Response.status(Response.Status.FORBIDDEN) //200
@@ -60,35 +66,33 @@ public class AuthenticationEndpoint {
         }
     }
 
+
+    @POST
+    @Path("/cors")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response corstest(){
+        User user = new User();
+        user.setUsername("tester");
+        return Response.ok() //200
+                .entity(gson.toJson(user))
+                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                .allow("OPTIONS").build();
+    }
+
+
+
     @POST
     @Path("/login")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-
     public Response loginUser(
             LoginRequest loginRequest){
-        return Response.status(200).entity(machine.loginUser(loginRequest.getUsername(),loginRequest.getPassword()))
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                .header("Content-Type", "application/json")
-                .allow("OPTIONS")
-                .build();
-
-
+        return machine.loginUser(loginRequest.getUsername(), loginRequest.getPassword());
     }
 
 
-    @GET
-    @Secured
-    @Path("/test")
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response test(){
-        return Response.ok() //200
-                .entity("test")
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                .allow("OPTIONS").build();
-    }
 
 
 

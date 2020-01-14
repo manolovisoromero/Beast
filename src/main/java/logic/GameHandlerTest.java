@@ -14,13 +14,6 @@ class GameHandlerTest {
 
     GameHandler gameHandler = GameHandler.getInstance();
 
-
-    @BeforeEach
-     void setUp(){
-        gameHandler.createLabels(game);
-        gameHandler.leftLabels(game);
-    }
-
     private boolean [][] game = new boolean[][]{
             new boolean[]{true,true,false,false,false},
             new boolean[]{true,true,false,true,true},
@@ -28,6 +21,17 @@ class GameHandlerTest {
             new boolean[]{true,false,true,false,false},
             new boolean[]{true,false,false,false,true}
     };
+
+
+
+
+    public void printer(int[][] expected, int [][]actual){
+        System.out.println("Expected: \n");
+        System.out.println(Arrays.deepToString(expected).replace("], ", "]\n"));
+        System.out.println("Actual: \n");
+        System.out.println(Arrays.deepToString(actual).replace("], ", "]\n"));
+    }
+
 
 
     @Test
@@ -43,15 +47,12 @@ class GameHandlerTest {
         };
 
         //Act
-        int [][] actual = gameHandler.gameField.getUpperLabels();
+        int [][] actual = gameHandler.upperLabels(game);
 
 
         //Assert
-        System.out.println("Expected: \n");
-        System.out.println(Arrays.deepToString(expected).replace("], ", "]\n"));
-        System.out.println("Actual: \n");
-        System.out.println(Arrays.deepToString(actual).replace("], ", "]\n"));
-        Assert.assertEquals(expected,gameHandler.gameField.getUpperLabels());
+        printer(expected,actual);
+        Assert.assertEquals(expected,actual);
 
 
     }
@@ -59,7 +60,7 @@ class GameHandlerTest {
     @Test
     void create_Left_Labels() {
         //Arrange
-        int [][] actual = gameHandler.gameField.getLeftLabels();
+        int [][] actual = gameHandler.leftLabels(game);
 
         //Act
         int [][] expected = new int[][]{
@@ -71,10 +72,7 @@ class GameHandlerTest {
         };
 
         //Assert
-        System.out.println("Expected: \n");
-        System.out.println(Arrays.deepToString(expected).replace("], ", "]\n"));
-        System.out.println("Actual: \n");
-        System.out.println(Arrays.deepToString(actual).replace("], ", "]\n"));
+        printer(expected,actual);
         Assert.assertEquals(expected,actual);
 
     }

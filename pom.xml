@@ -25,6 +25,16 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlets -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <version>${jetty-server.version}</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -64,6 +74,9 @@
             <artifactId>jersey-hk2</artifactId>
             <version>${jersey-server.version}</version>
         </dependency>
+
+
+
 
         <!-- 20190318 LBO: Needed by Jersey -->
         <dependency>

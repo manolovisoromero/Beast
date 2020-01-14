@@ -1,5 +1,7 @@
 package endpoints;
 
+import com.google.gson.Gson;
+import entities.User;
 import logic.GameField;
 import logic.Machine;
 
@@ -11,6 +13,8 @@ import javax.ws.rs.core.Response;
 public class ResourceEndpoint {
 
     Machine machine = Machine.getInstance();
+    Gson gson = new Gson();
+
 
 
 
@@ -26,22 +30,49 @@ public class ResourceEndpoint {
     }
 
     @GET
-    //@AuthenticationEndpoint.Secured
-    @Path("/game/{userID}")
-    public Response getNewGame(@PathParam("userID") int userID) {
-
-        String game = machine.getUnplayedGame(userID);
-
-        if (game == null) {
-            return Response.status(400).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                    .entity("testGames")
-                    .allow("OPTIONS").build();
-        } else {
-            return Response.status(200).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                    .entity(game)
-                    .allow("OPTIONS").build();
-        }
+    @Path("/cors")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response corstest(){
+        User user = new User();
+        user.setUsername("tester");
+        return Response.ok() //200
+                .entity(gson.toJson(user))
+                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                .allow("OPTIONS").build();
     }
+
+    @GET
+    @Path("/cors3/{userid}")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response corstest2(@PathParam("userid") int userID){
+        return Response.ok() //200
+                .entity(machine.getUnplayedGame(userID  ))
+                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                .allow("OPTIONS").build();
+    }
+
+
+
+
+
+    @GET
+    @Path("/game/{userID}")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUnplayedGame(@PathParam("userID") String userID){
+        String game = machine.getUnplayedGame(Integer.parseInt(userID));
+        return Response.ok() //200
+                .entity(game)
+                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                .allow("OPTIONS").build();
+    }
+
+
 
 
 
