@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Boodschappenlijst_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Boodschappenlijst_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boodschappenlijst.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Beast.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/GameHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +221,7 @@
       <workItem from="1578052396838" duration="4153000" />
       <workItem from="1578147697978" duration="6458000" />
       <workItem from="1578226062380" duration="8078000" />
-      <workItem from="1578390627983" duration="13587000" />
+      <workItem from="1578390627983" duration="14209000" />
     </task>
     <task id="LOCAL-00001" summary="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER">
       <created>1574363228038</created>
@@ -267,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576446142743</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="leftlabels, ssl edits">
+      <created>1578422484647</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578422484649</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +309,8 @@
     <MESSAGE value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
     <MESSAGE value="filters werken nog niet" />
     <MESSAGE value="Filter werkt, met authentication voorbeeld" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter werkt, met authentication voorbeeld" />
+    <MESSAGE value="leftlabels, ssl edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="leftlabels, ssl edits" />
   </component>
   <component name="masterDetails">
     <states>
