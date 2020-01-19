@@ -1,10 +1,12 @@
 package endpoints;
 
+import REST_calls.PostUsergame;
 import com.google.gson.Gson;
 import entities.User;
 import logic.GameField;
 import logic.Machine;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -44,7 +46,7 @@ public class ResourceEndpoint {
     }
 
     @GET
-    @Path("/cors3/{userid}")
+    @Path("/game/{userid}")
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
     public Response corstest2(@PathParam("userid") int userID){
@@ -55,22 +57,28 @@ public class ResourceEndpoint {
                 .allow("OPTIONS").build();
     }
 
-
-
-
-
-    @GET
-    @Path("/game/{userID}")
-    @Consumes(MediaType.TEXT_PLAIN)
+    @POST
+    @Path("/usergame")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUnplayedGame(@PathParam("userID") String userID){
-        String game = machine.getUnplayedGame(Integer.parseInt(userID));
-        return Response.ok() //200
-                .entity(game)
-                .header("Access-Control-Allow-Origin", "http://localhost:3000")
-                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
-                .allow("OPTIONS").build();
+    public Response newUsername(PostUsergame postUsergame){
+        return machine.winCheck(postUsergame);
+
     }
+
+
+//    @GET
+//    @Path("/game/{userID}")
+//    @Consumes(MediaType.TEXT_PLAIN)
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public Response getUnplayedGame(@PathParam("userID") String userID){
+//        String game = machine.getUnplayedGame(Integer.parseInt(userID));
+//        return Response.ok() //200
+//                .entity(game)
+//                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+//                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+//                .allow("OPTIONS").build();
+//    }
 
 
 
