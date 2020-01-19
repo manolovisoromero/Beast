@@ -9,7 +9,6 @@ public class GameXY implements Serializable{
 
 
 
-
     @Column(name = "gameID", nullable = false)
     private int gameID;
 

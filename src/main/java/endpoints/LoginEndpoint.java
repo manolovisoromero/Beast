@@ -11,6 +11,8 @@ import com.google.gson.Gson;
 import logic.Machine;
 import logic.Message;
 
+import java.security.NoSuchAlgorithmException;
+
 
 @Path("/login")
 public class LoginEndpoint {
@@ -53,11 +55,11 @@ public class LoginEndpoint {
 
 
     @POST
-    @Path("/registerUser")
+    @Path("/register")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public Response registerUser(
-            RegisterRequest registerRequest){
+            RegisterRequest registerRequest) throws NoSuchAlgorithmException {
         return Response.status(200).entity(machine.registerUser(registerRequest))
                 .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
@@ -78,18 +80,6 @@ public class LoginEndpoint {
                 .build();
     }
 
-    @GET
-    @Path("/Game")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getGame(
-            ){
-        return Response.ok() //200
-                .entity(machine.getGame())
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                .allow("OPTIONS").build();
-    }
 
     @POST
     @Path("/Check-Auth")

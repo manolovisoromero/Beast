@@ -1,6 +1,8 @@
 package logic;
 
 import java.lang.reflect.Array;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import REST_calls.ChangePassRequest;
@@ -32,7 +34,7 @@ public class Machine {
     }
 
 
-    public String registerUser(RegisterRequest registerRequest){
+    public String registerUser(RegisterRequest registerRequest) throws NoSuchAlgorithmException {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
@@ -45,8 +47,9 @@ public class Machine {
             }
         }
 
-        User userr = new User(registerRequest.getUsername(),registerRequest.getPassword());
+        User userr = new User(registerRequest.getUsername(),passwordHasher(registerRequest.getPassword()));
         session.save(userr);
+        session.getTransaction().commit();
         session.close();
         HibernateUtil.shutdown();
 
@@ -85,9 +88,15 @@ public class Machine {
     }
 
     public Response loginUser(String username, String password){
-
+        String hashedPass = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
+
+        try {
+            hashedPass = passwordHasher(password);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
 
         Query query = session.createQuery("FROM User WHERE username =:username");
         query.setParameter("username", username);
@@ -95,7 +104,7 @@ public class Machine {
 
         try{
             User user = users.get(0);
-            if(user.getPassword().equals(password)){
+            if(user.getPassword().equals(hashedPass)){
                 String token = generateToken();
                 user.setToken(token);
                 session.update(user);
@@ -246,6 +255,68 @@ public class Machine {
         return null;
     }
 
+    public ArrayList<Game> postGame(boolean [][] gamelist){
+
+        ArrayList<Game> games = new ArrayList<>();
+        if(arrayRightsize(gamelist)){
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            int id = getUniqueId(session);
+            for(int i = 0;i<gamelist.length;i++){
+                for(int j = 0;j<gamelist[i].length;j++){
+                    Game game = new Game();
+                    GameXY gameXY = new GameXY();
+                    gameXY.setX(i);
+                    gameXY.setY(j);
+                    gameXY.setGameID(id);
+                    game.setGameXY(gameXY);
+                    game.setValue(gamelist[i][j]);
+                    games.add(game);
+                    session.save(game);
+                }
+            }
+            session.getTransaction().commit();
+            session.close();
+            HibernateUtil.shutdown();
+            return games;
+        }
+        return null;
+    }
+
+    public String deleteGame(int gameID){
+
+
+        try{
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            if(!getUniqueIds(session).contains(gameID)){
+                return "GameID not found";
+            }
+            Query query = session.createQuery("from Game WHERE gameXY.gameID=:gameid");
+            query.setParameter("gameid", gameID);
+            List<Game> games =  query.list();
+            for(Game game:games){
+                session.delete(game);
+            }
+            session.getTransaction().commit();
+            session.close();
+
+            return "Succesfully deleted";
+        }
+        catch(Exception e){
+            return "Something went wrong";
+        }finally{
+            HibernateUtil.shutdown();
+        }
+
+
+
+
+    }
+
+
+
+
 
     /*
     CRUD for Note done
@@ -330,7 +401,6 @@ public class Machine {
     }
 
     public String updateNote(int noteID, String content){
-
         try{
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
@@ -349,9 +419,6 @@ public class Machine {
             HibernateUtil.shutdown();
 
         }
-
-
-
         return "Success";
 
     }
@@ -359,20 +426,61 @@ public class Machine {
 
 
 
-    public String getGame(){
+    /*
+    Functional methods
+     */
 
-        boolean [][] game = new boolean[][]{
-                new boolean[]{true,true,false,false,false},
-                new boolean[]{true,true,false,true,true},
-                new boolean[]{false,true,false,true,false},
-                new boolean[]{true,false,true,false,false},
-                new boolean[]{true,false,false,false,true}
-        };
+    private int getUniqueId(Session session){
+        List<Integer> uniqueIds = getUniqueIds(session);
+        System.out.println(uniqueIds);
+        int uniqueId = 1;
+        boolean found = false;
+        while(!found ) {
+            if(uniqueIds.contains(uniqueId)){
+                uniqueId++;
+            }else{
+                found = true;
+            }
+        }
+        System.out.println(uniqueId);
+        return uniqueId;
+    }
 
-        String json = gson.toJson(game);
-        return json;
+    private List<Integer> getUniqueIds(Session session){
+        Query query = session.createQuery("SELECT DISTINCT gameXY.gameID from Game");
+        List<Integer> uniqueIds = query.list();
+        return uniqueIds;
+    }
+
+    public boolean arrayRightsize(boolean [][] game){
+        if(game.length == 5){
+            for(int i = 0;i<game.length;i++){
+                if(game[i].length ==5){
+                    return true;
+                }
+            }
+        }
+        return false;
 
     }
+
+    private String passwordHasher(String password) throws NoSuchAlgorithmException {
+        String hashedPassword;
+        MessageDigest md = MessageDigest.getInstance("MD5");
+
+        md.update(password.getBytes());
+
+        byte[] bytes = md.digest();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i< bytes.length;i++){
+            sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+        }
+        hashedPassword = sb.toString();
+
+        return hashedPassword;
+    }
+
+
 
 
 
