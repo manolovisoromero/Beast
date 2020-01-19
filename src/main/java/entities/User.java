@@ -28,10 +28,10 @@ public class User implements Serializable {
     @Column(name="username", nullable = false, length = 20)
     private String username;
 
-    @Column(name="password", nullable = false, length = 20)
+    @Column(name="password", nullable = false, length = 200)
     private String password;
 
-    @Column(name="token", nullable = false, length = 20)
+    @Column(name="token", nullable = true, length = 20)
     private String token;
 
 

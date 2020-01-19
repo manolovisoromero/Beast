@@ -31,17 +31,16 @@ public class Server {
         //Https
 
         SslContextFactory sslContextFactory = new SslContextFactory();
-                    sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl3/jetty.pkcs12");
 
 
-//        File tmpDir = new File("C:/Users/manol/IdeaProjects/Beast/ssl/keystore");
-//        boolean exists = tmpDir.exists();
-//        if(exists){
-//            sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl/keystore.p12");
-//        }else{
-//            sslContextFactory.setKeyStorePath("C:/Users/manolo/IdeaProjects/Boodschappenlijst/ssl/keystore.p12");
-//
-//        }
+        File tmpDir = new File("C:/Users/manol/IdeaProjects/Beast/ssl3/jetty.pkcs12");
+        boolean exists = tmpDir.exists();
+        if(exists){
+            sslContextFactory.setKeyStorePath("C:/Users/manol/IdeaProjects/Beast/ssl3/jetty.pkcs12");
+        }else{
+            sslContextFactory.setKeyStorePath("C:/Users/manolo/IdeaProjects/Boodschappenlijst/ssl2/jetty.pkcs12");
+
+        }
         sslContextFactory.setKeyStorePassword("manolo");
 
         org.eclipse.jetty.server.ServerConnector sslConnector = new org.eclipse.jetty.server.ServerConnector(server,
