@@ -8,6 +8,16 @@ public class GameField {
     private int[][] UpperLabels = new int[5][5];
     private int[][] LeftLabels = new int[5][5];
 
+    public int getGameID() {
+        return gameID;
+    }
+
+    public void setGameID(int gameID) {
+        this.gameID = gameID;
+    }
+
+    private int gameID;
+
     public GameField() {
 
     }

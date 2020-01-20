@@ -6,12 +6,14 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import REST_calls.ChangePassRequest;
+import REST_calls.PostUsergame;
 import REST_calls.RegisterRequest;
 import REST_calls.ReturnMsg;
 import com.google.gson.Gson;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -104,6 +106,7 @@ public class Machine {
 
         try{
             User user = users.get(0);
+            System.out.println("WACHTWOORDEN"+user.getPassword()+ hashedPass);
             if(user.getPassword().equals(hashedPass)){
                 String token = generateToken();
                 user.setToken(token);
@@ -208,6 +211,7 @@ public class Machine {
 
 
             GameField gameField = gameHandler.createLabels(data);
+            gameField.setGameID(game.getGameXY().getGameID());
 
 
             session.close();
@@ -424,6 +428,51 @@ public class Machine {
     }
 
 
+    /*
+    CRUD for usergame
+     */
+
+    public Response winCheck(PostUsergame postUsergame) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        try{
+            Usergame usergame = new Usergame();
+            usergameID usergameID = new usergameID();
+            usergameID.setGameID(postUsergame.getGameID());
+            usergameID.setUserID(postUsergame.getUserID());
+            usergame.setUsergameid(usergameID);
+            System.out.println(Arrays.deepToString(postUsergame.getGameField()));
+            System.out.println(Arrays.deepToString(postUsergame.getPlayerInput()));
+
+
+            if (checkArrayEqual(postUsergame.getPlayerInput(),postUsergame.getGameField()) ) {
+                usergame.setWin(true);
+            }else{
+                usergame.setWin(false);
+            }
+            session.save(usergame);
+            session.getTransaction().commit();
+            return Response.status(202)
+                    .entity(gson.toJson(usergame))
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS")
+                    .build();
+        }catch(Exception e) {
+            e.printStackTrace();
+            ReturnMsg returnMsg = new ReturnMsg();
+            returnMsg.setMessage(e.getMessage());
+            return Response.status(400)
+                    .entity(gson.toJson(returnMsg))
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .allow("OPTIONS")
+                    .build();
+        }finally{
+            session.close();
+            HibernateUtil.shutdown();
+        }
+    }
 
 
     /*
@@ -481,6 +530,20 @@ public class Machine {
     }
 
 
+
+
+    private boolean checkArrayEqual(boolean[][] array1, boolean[][] array2){
+        boolean equal = true;
+        for(int i = 0;i<array1.length;i++){
+            for(int j = 0;j<array1[0].length;j++){
+                if(array1[i][j] != array2[i][j]){
+                    equal = false;
+                }
+            }
+        }
+
+        return equal;
+    }
 
 
 

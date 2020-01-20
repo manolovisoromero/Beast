@@ -1,11 +1,14 @@
 package endpoints;
 
+import REST_calls.PostUsergame;
 import com.google.gson.Gson;
 import entities.Game;
+import entities.Note;
 import entities.User;
 import logic.GameField;
 import logic.Machine;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -46,23 +49,16 @@ public class ResourceEndpoint {
                 .allow("OPTIONS").build();
     }
 
-    @GET
-    @Path("/cors3/{userid}")
-    @Consumes(MediaType.TEXT_PLAIN)
+
+
+    @POST
+    @Path("/usergame")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response corstest2(@PathParam("userid") int userID){
-        return Response.ok() //200
-                .entity(machine.getUnplayedGame(userID  ))
-                .header("Access-Control-Allow-Origin", "http://localhost:3000")
-                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
-                .allow("OPTIONS").build();
+    public Response newUsername(PostUsergame postUsergame){
+        return machine.winCheck(postUsergame);
+
     }
-
-
-
-    /*
-    CRUD for Game
-     */
 
     @GET
     @Path("/game/{userID}")
@@ -96,54 +92,46 @@ public class ResourceEndpoint {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/game/{gameid}")
     public Response deleteGame(
-            @PathParam("gameid") int gameid){
+            @PathParam("gameid") int gameid) {
         String msg = machine.deleteGame(gameid);
-        if(msg.equals("Succesfully deleted")){
+        if (msg.equals("Succesfully deleted")) {
             return Response.ok() //200
                     .entity(msg)
                     .header("Access-Control-Allow-Origin", "*")
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                     .allow("OPTIONS").build();
-        }else{
+        } else {
             return Response.status(500) //200
                     .entity(msg)
                     .header("Access-Control-Allow-Origin", "*")
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                     .allow("OPTIONS").build();
         }
-
     }
+
 
     @POST
     @AuthenticationEndpoint.Secured
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/game")
-    public Response postGame(boolean [][] field){
+    public Response postGame(boolean [][] field) {
         ArrayList<Game> games = machine.postGame(field);
 
-        if(games != null){
+        if (games != null) {
             return Response.ok() //200
                     .entity(gson.toJson(games))
                     .header("Access-Control-Allow-Origin", "*")
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                     .allow("OPTIONS").build();
-        }else{
+        } else {
             return Response.status(400) //200
                     .header("Access-Control-Allow-Origin", "*")
                     .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                     .allow("OPTIONS").build();
         }
-
     }
 
-
-
-
-
-    /*
-    CRUD for User
-     */
 
     @GET
     @AuthenticationEndpoint.Secured
@@ -156,6 +144,7 @@ public class ResourceEndpoint {
                 .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                 .allow("OPTIONS").build();
     }
+
     @GET
     @AuthenticationEndpoint.Secured
     @Path("/users")
@@ -167,6 +156,7 @@ public class ResourceEndpoint {
                 .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
                 .allow("OPTIONS").build();
     }
+
     @DELETE
     @AuthenticationEndpoint.Secured
     @Path("/users/{id}")
@@ -191,8 +181,42 @@ public class ResourceEndpoint {
                 .allow("OPTIONS").build();
     }
 
-    /*
-    CRUD for Note
-     */
+
+    @GET
+    @Path("/note/{userid}")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getNotes( @PathParam("userid") int userID){
+
+        ArrayList<Note> notes = machine.getNotesByUser(userID);
+
+        return Response.ok() //200
+                .entity(gson.toJson(notes))
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS").build();
+
+    }
+
+
+
+
+
+    @DELETE
+    @Path("/note/{noteid}")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response deleteNote( @PathParam("noteid") int noteID){
+
+        machine.deleteNote(noteID);
+
+        return Response.ok() //200
+                .entity("hoi")
+                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                .allow("OPTIONS").build();
+
+    }
+
 
 }
