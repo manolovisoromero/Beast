@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/REST_calls/postNoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/REST_calls/putNoteRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/GameXY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/GameXY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Server.java" afterDir="false" />
     </list>
@@ -35,31 +34,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-833">
-              <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="213" column="28" selection-start-line="213" selection-start-column="28" selection-end-line="213" selection-end-column="28" />
+            <state relative-caret-position="194">
+              <caret line="258" column="18" lean-forward="true" selection-start-line="258" selection-start-column="18" selection-end-line="258" selection-end-column="18" />
               <folding>
                 <element signature="method#getGameById#0;class#ResourceEndpoint#0" />
                 <element signature="method#corstest#0;class#ResourceEndpoint#0" />
-                <element signature="method#newUsername#0;class#ResourceEndpoint#0" />
+                <element signature="e#1568#1569#0" expanded="true" />
+                <element signature="e#1621#1622#0" expanded="true" />
                 <element signature="method#getAllGames#0;class#ResourceEndpoint#0" />
                 <element signature="method#deleteGame#0;class#ResourceEndpoint#0" />
-                <element signature="e#3287#3567#1" />
-                <element signature="e#3571#3858#1" />
                 <element signature="method#postGame#0;class#ResourceEndpoint#0" />
                 <element signature="method#getUserById#0;class#ResourceEndpoint#0" />
                 <element signature="method#getAllUsers#0;class#ResourceEndpoint#0" />
@@ -72,9 +58,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/postNoteRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#147#148#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/putNoteRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding>
+                <element signature="e#115#116#0" expanded="true" />
+                <element signature="e#144#145#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="850">
               <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
             </state>
           </provider>
@@ -90,19 +123,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Note.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+            <state relative-caret-position="544">
+              <caret line="67" column="85" selection-start-line="67" selection-start-column="85" selection-end-line="67" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -110,56 +134,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/logic/Machine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="108" column="65" selection-start-line="108" selection-start-column="65" selection-end-line="108" selection-end-column="65" />
+            <state relative-caret-position="9">
+              <caret line="414" lean-forward="true" selection-start-line="414" selection-end-line="414" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#738#739#0" expanded="true" />
                 <element signature="e#768#769#0" expanded="true" />
                 <element signature="e#0#9#1" expanded="true" />
                 <element signature="method#changePassword#0;class#Machine#0" />
+                <element signature="method#loginUser#0;class#Machine#0" />
                 <element signature="e#0#35#1" expanded="true" />
-                <element signature="e#4336#4337#0" expanded="true" />
-                <element signature="e#4370#4371#0" expanded="true" />
+                <element signature="method#getGamesByUser#0;class#Machine#0" />
+                <element signature="method#getUnplayedGame#0;class#Machine#0" />
                 <element signature="e#0#56#0" expanded="true" />
                 <element signature="e#0#18#1" expanded="true" />
                 <element signature="e#0#47#1" expanded="true" />
+                <element signature="method#findUnplayedGame#0;class#Machine#0" />
                 <element signature="e#0#37#1" expanded="true" />
                 <element signature="e#0#41#0" expanded="true" />
+                <element signature="method#winCheck#0;class#Machine#0" />
                 <element signature="e#0#39#1" expanded="true" />
+                <element signature="e#0#54#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/GameField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-              <folding>
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#294#295#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Usergame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -180,6 +176,8 @@
       <find>win</find>
       <find>cors</find>
       <find>reg</find>
+      <find>delete</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +186,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/REST_calls/postNoteRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/Machine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/REST_calls/putNoteRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" />
       </list>
     </option>
@@ -214,7 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -302,6 +302,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -468,6 +469,7 @@
       <workItem from="1578750765372" duration="13608000" />
       <workItem from="1578833887454" duration="1652000" />
       <workItem from="1579179614429" duration="8364000" />
+      <workItem from="1579547817604" duration="7932000" />
     </task>
     <task id="LOCAL-00001" summary="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER">
       <created>1574363228038</created>
@@ -497,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576446142743</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge branch 'master' of https://github.com/manolovisoromero/Beast&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/endpoints/ResourceEndpoint.java&#10;#&#9;src/main/java/logic/Machine.java">
+      <created>1579468301745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579468301745</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -524,13 +533,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5135000" />
+    <option name="totallyTimeSpent" value="13303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14605543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -654,16 +663,10 @@
     <MESSAGE value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
     <MESSAGE value="filters werken nog niet" />
     <MESSAGE value="Filter werkt, met authentication voorbeeld" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter werkt, met authentication voorbeeld" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/manolovisoromero/Beast&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/endpoints/ResourceEndpoint.java&#10;#&#9;src/main/java/logic/Machine.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/manolovisoromero/Beast&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/endpoints/ResourceEndpoint.java&#10;#&#9;src/main/java/logic/Machine.java" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/PostUsergame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -678,6 +681,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/RegisterRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -685,65 +698,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/GameField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Usergame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="850">
           <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="67" column="85" selection-start-line="67" selection-start-column="85" selection-end-line="67" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/postNoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/putNoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#115#116#0" expanded="true" />
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/Machine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="108" column="65" selection-start-line="108" selection-start-column="65" selection-end-line="108" selection-end-column="65" />
+        <state relative-caret-position="9">
+          <caret line="414" lean-forward="true" selection-start-line="414" selection-end-line="414" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#738#739#0" expanded="true" />
             <element signature="e#768#769#0" expanded="true" />
             <element signature="e#0#9#1" expanded="true" />
             <element signature="method#changePassword#0;class#Machine#0" />
+            <element signature="method#loginUser#0;class#Machine#0" />
             <element signature="e#0#35#1" expanded="true" />
-            <element signature="e#4336#4337#0" expanded="true" />
-            <element signature="e#4370#4371#0" expanded="true" />
+            <element signature="method#getGamesByUser#0;class#Machine#0" />
+            <element signature="method#getUnplayedGame#0;class#Machine#0" />
             <element signature="e#0#56#0" expanded="true" />
             <element signature="e#0#18#1" expanded="true" />
             <element signature="e#0#47#1" expanded="true" />
+            <element signature="method#findUnplayedGame#0;class#Machine#0" />
             <element signature="e#0#37#1" expanded="true" />
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="method#winCheck#0;class#Machine#0" />
             <element signature="e#0#39#1" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-833">
-          <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="213" column="28" selection-start-line="213" selection-start-column="28" selection-end-line="213" selection-end-column="28" />
+        <state relative-caret-position="194">
+          <caret line="258" column="18" lean-forward="true" selection-start-line="258" selection-start-column="18" selection-end-line="258" selection-end-column="18" />
           <folding>
             <element signature="method#getGameById#0;class#ResourceEndpoint#0" />
             <element signature="method#corstest#0;class#ResourceEndpoint#0" />
-            <element signature="method#newUsername#0;class#ResourceEndpoint#0" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
             <element signature="method#getAllGames#0;class#ResourceEndpoint#0" />
             <element signature="method#deleteGame#0;class#ResourceEndpoint#0" />
-            <element signature="e#3287#3567#1" />
-            <element signature="e#3571#3858#1" />
             <element signature="method#postGame#0;class#ResourceEndpoint#0" />
             <element signature="method#getUserById#0;class#ResourceEndpoint#0" />
             <element signature="method#getAllUsers#0;class#ResourceEndpoint#0" />

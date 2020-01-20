@@ -65,7 +65,9 @@ public class Server {
 
         FilterHolder filterHolder = handler.addFilter(org.eclipse.jetty.servlets.CrossOriginFilter
                 .class, "/*", EnumSet.of(DispatcherType.REQUEST));
-        filterHolder.setInitParameter("allowedOrigins", "*");
+        filterHolder.setInitParameter(CrossOriginFilter.ALLOWED_METHODS_PARAM, "PUT,GET,POST,DELETE,HEAD,OPTIONS");
+        //filterHolder.setInitParameter("allowedMethods", "*");
+
 
 
 
