@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Beast_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Boodschappenlijst_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jetty_alpn_server_9_4_20_v20190813.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/GameXY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/GameXY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +213,8 @@
       <workItem from="1578658160134" duration="4880000" />
       <workItem from="1578750765372" duration="13608000" />
       <workItem from="1578833887454" duration="1652000" />
-      <workItem from="1579179614429" duration="8364000" />
+      <workItem from="1579179614429" duration="8496000" />
+      <workItem from="1579520608000" duration="252000" />
     </task>
     <task id="LOCAL-00001" summary="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER">
       <created>1574363228038</created>
@@ -252,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576446142743</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CRUD alle entiteiten">
+      <created>1579460126160</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579460126161</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -326,7 +325,8 @@
     <MESSAGE value="ORM &amp; REST: POST en PUT werken (GET vanzelfsprekend aangezien easy),&#10;database structuur staat&#10;JE MOET WAARSCHIJNLIJK WAT LOKALE PATHS VERANDEREN OP LAPTOP" />
     <MESSAGE value="filters werken nog niet" />
     <MESSAGE value="Filter werkt, met authentication voorbeeld" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter werkt, met authentication voorbeeld" />
+    <MESSAGE value="CRUD alle entiteiten" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD alle entiteiten" />
   </component>
   <component name="masterDetails">
     <states>
