@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="" />
+    <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,15 +86,18 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\java\Endpoints" />
-      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\Endpoints" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Manol\IdeaProjects\Beast\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\java\Endpoints" />
+      <recent name="C:\Users\Manol\IdeaProjects\Beast\src\main\Endpoints" />
       <recent name="C:\Users\Manol\IdeaProjects\Beast\resources" />
     </key>
   </component>
@@ -215,7 +222,7 @@
       <workItem from="1578750765372" duration="13608000" />
       <workItem from="1578833887454" duration="1652000" />
       <workItem from="1579179614429" duration="8496000" />
-      <workItem from="1579520608000" duration="507000" />
+      <workItem from="1579520608000" duration="2555000" />
     </task>
     <task id="LOCAL-00001" summary="ORM werkt ( nog niet de juiste gegevens) &#10;VERANDER DATABASE LOCAL HOST ALS JE OP LAPTOP ZIT&#10;EN KEYSTORE FILE VOOR DE HTTPS SERVER">
       <created>1574363228038</created>
@@ -266,31 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1579521039952</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test">
+      <created>1579521222111</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579521222111</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="GameHandlerTest - 2020.01.09 at 19h 45m 17s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameHandlerTest - 2020.01.09 at 19h 46m 06s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameHandlerTest - 2020.01.09 at 19h 46m 51s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameHandlerTest - 2020.01.09 at 21h 04m 35s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameHandlerTest - 2020.01.09 at 21h 11m 41s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameHandlerTest - 2020.01.09 at 21h 12m 24s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameHandlerTest - 2020.01.09 at 21h 12m 43s.xml">
-      <configuration name="GameHandlerTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -342,7 +333,8 @@
     <MESSAGE value="Filter werkt, met authentication voorbeeld" />
     <MESSAGE value="CRUD alle entiteiten" />
     <MESSAGE value="surefire" />
-    <option name="LAST_COMMIT_MESSAGE" value="surefire" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="masterDetails">
     <states>

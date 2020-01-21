@@ -1,6 +1,8 @@
 package logic;
 
 import java.lang.reflect.Array;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -34,6 +36,16 @@ public class Machine {
     public static Machine getInstance(){
         return machine;
     }
+
+    public ArrayList<String> getTokens() {
+        return tokens;
+    }
+
+    public void setTokens(ArrayList<String> tokens) {
+        this.tokens = tokens;
+    }
+
+    private ArrayList<String> tokens = new ArrayList<>();
 
 
     public String registerUser(RegisterRequest registerRequest) throws NoSuchAlgorithmException {
@@ -106,10 +118,10 @@ public class Machine {
 
         try{
             User user = users.get(0);
-            System.out.println("WACHTWOORDEN"+user.getPassword()+ hashedPass);
             if(user.getPassword().equals(hashedPass)){
                 String token = generateToken();
                 user.setToken(token);
+                tokens.add(token);
                 session.update(user);
                 ReturnMsg returnMsg = new ReturnMsg();
                 returnMsg.setToken(user.getToken());
@@ -142,12 +154,6 @@ public class Machine {
 
     }
 
-    public String generateToken(){
-        return "123123213";
-    }
-
-
-
     private User getUser(String username){
         return null;
 
@@ -164,11 +170,6 @@ public class Machine {
 
         session.close();
         HibernateUtil.shutdown();
-
-
-
-
-
 
         return games;
     }
@@ -187,15 +188,7 @@ public class Machine {
         Query queryGames = session.createQuery("FROM entities.Game");
         games = (ArrayList<Game>) queryGames.list();
 
-
-
-
-
-
-
         Game game = findUnplayedGame(games,usergames);
-
-
         if(game != null){
 
             Query queryGame = session.createQuery("FROM entities.Game WHERE gameXY.gameID =:gameid");
@@ -208,12 +201,8 @@ public class Machine {
             for(Game gamer: persongames){
                 data[gamer.getGameXY().getX()][gamer.getGameXY().getY()] = gamer.getValue();
             }
-
-
             GameField gameField = gameHandler.createLabels(data);
             gameField.setGameID(game.getGameXY().getGameID());
-
-
             session.close();
             HibernateUtil.shutdown();
 
@@ -221,32 +210,22 @@ public class Machine {
         }else{
             session.close();
             HibernateUtil.shutdown();
-
             return "No game found";
-
         }
-
-
-
     }
 
     public Game findUnplayedGame(ArrayList<Game> games, ArrayList<Usergame> usergames){
         ArrayList<Integer> gamesNr = new ArrayList<>();
         ArrayList<Integer> usergamesNr = new ArrayList<>();
 
-
-
         for(Game game: games){
             gamesNr.add(game.getGameXY().getGameID());
         }
-
         for(Usergame usergame: usergames){
             usergamesNr.add(usergame.getUsergameid().getGameID());
         }
-
         System.out.println("gamesnr"+gamesNr);
         System.out.println("usergamesnr"+usergamesNr);
-
 
         for(int i = 0;i<games.size();i++){
             if(!usergamesNr.contains(games.get(i).getGameXY().getGameID())){
@@ -254,8 +233,6 @@ public class Machine {
                 return games.get(i);
             }
         }
-
-
         return null;
     }
 
@@ -289,7 +266,6 @@ public class Machine {
 
     public String deleteGame(int gameID){
 
-
         try{
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
@@ -313,14 +289,7 @@ public class Machine {
             HibernateUtil.shutdown();
         }
 
-
-
-
     }
-
-
-
-
 
     /*
     CRUD for Note done
@@ -330,8 +299,6 @@ public class Machine {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
-
-
         Query query = session.createQuery("FROM entities.Note  WHERE userID =:userid ");
         query.setParameter("userid", userID);
         notes =  (ArrayList<Note>) query.list();
@@ -339,10 +306,8 @@ public class Machine {
         for(Note note: notes){
             System.out.println(note.getContent());
         }
-
         session.close();
         HibernateUtil.shutdown();
-
         return notes;
     }
 
@@ -368,14 +333,7 @@ public class Machine {
 
         }
 
-
-
         return "Success";
-
-
-
-
-
     }
 
     public String deleteNote(int noteID){
@@ -396,12 +354,7 @@ public class Machine {
         HibernateUtil.shutdown();
 
     }
-
-
-
         return "Success";
-
-
     }
 
     public String updateNote(int noteID, String content){
@@ -529,7 +482,14 @@ public class Machine {
         return hashedPassword;
     }
 
+    public String generateToken() {
+        byte[] array = new byte[20]; // length is bounded by 7
+        new Random().nextBytes(array);
+        String generatedString = new String(array, StandardCharsets.UTF_8);
+        System.out.println(generatedString);
 
+        return generatedString;
+    }
 
 
     private boolean checkArrayEqual(boolean[][] array1, boolean[][] array2){
@@ -545,12 +505,9 @@ public class Machine {
         return equal;
     }
 
-
-
-
-
-
-
+    public boolean validateToken(String token){
+        return tokens.contains(token);
+    }
 
 
 
