@@ -14,11 +14,9 @@ public class Note {
 
     public Note(){}
 
-    public Note(int noteID, String content, int userID){
+    public Note(int noteID, String content){
         this.content = content;
         this.noteID = noteID;
-        this.userID = userID;
-
     }
 
 
@@ -31,9 +29,19 @@ public class Note {
     @Column(name="content", nullable = false, length = 100)
     private String content;
 
-    @Column(name="userID", nullable = false, length = 10)
-    private int userID;
 
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name="userID")
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public int getNoteID() {
         return noteID;
@@ -51,12 +59,6 @@ public class Note {
         this.content = content;
     }
 
-    public int getUserID() {
-        return userID;
-    }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
 
 }

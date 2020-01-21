@@ -34,22 +34,10 @@ public class ResourceEndpoint {
                 .allow("OPTIONS").build();
     }
 
-    @GET
-    @Path("/cors")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response corstest(){
-        User user = new User();
-        user.setUsername("tester");
-        return Response.ok() //200
-                .entity(gson.toJson(user))
-                .header("Access-Control-Allow-Origin", "http://localhost:3000")
-                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
-                .allow("OPTIONS").build();
-    }
 
 
 
+    //Game
     @POST
     @Path("/usergame")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -72,7 +60,7 @@ public class ResourceEndpoint {
     }
 
     @GET
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Path("/game")
     public Response getAllGames(){
         //Get games
@@ -108,7 +96,7 @@ public class ResourceEndpoint {
 
 
     @POST
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/game")
@@ -130,8 +118,11 @@ public class ResourceEndpoint {
     }
 
 
+
+    //User
+
     @GET
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Path("/users/{id}")
     public Response getUserById(){
         //Get game
@@ -143,7 +134,7 @@ public class ResourceEndpoint {
     }
 
     @GET
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Path("/users")
     public Response getAllUsers(){
         //Get games
@@ -155,7 +146,7 @@ public class ResourceEndpoint {
     }
 
     @DELETE
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Path("/users/{id}")
     public Response deleteUser(){
         //Delete game(not necessary)
@@ -167,7 +158,7 @@ public class ResourceEndpoint {
     }
 
     @POST
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Path("/users")
     public Response postUser(){
         //Add game
@@ -180,7 +171,7 @@ public class ResourceEndpoint {
 
 
 
-
+    //Notes
 
     @GET
     @Path("/note/{userid}")

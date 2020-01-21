@@ -13,6 +13,16 @@ public class Test {
     public static void main(String[] args) {
 //        Session session = HibernateUtil.getSessionFactory().openSession();
 //        session.beginTransaction();
+//
+//
+//
+//
+//
+//
+//
+//
+//        session.getTransaction().commit();
+//        HibernateUtil.shutdown();
 
         //Machine.getInstance().updateNote(2,"updated 2");
         //System.out.println(Machine.getInstance().getUnplayedGame(1));

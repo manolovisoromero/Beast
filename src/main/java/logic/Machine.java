@@ -104,10 +104,12 @@ public class Machine {
         return " Password change failed.";
     }
 
-    public Response loginUser(String username, String password){
+    public Response loginUser(String username, String password) throws NoSuchAlgorithmException {
         String hashedPass = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
+        System.out.println(password);
+        System.out.println(passwordHasher(password));
 
         try {
             hashedPass = passwordHasher(password);

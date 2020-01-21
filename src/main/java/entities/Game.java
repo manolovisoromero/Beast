@@ -6,6 +6,10 @@ import javax.persistence.*;
 import org.hibernate.annotations.OptimisticLockType;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 
 @Entity
@@ -49,7 +53,35 @@ public class Game implements Serializable {
     @Column(name = "value",  nullable = false, length = 1)
     private boolean value;
 
+    public List<Usergame> getUsergames() {
+        return usergames;
+    }
 
+    public void setUsergames(List<Usergame> usergames) {
+        this.usergames = usergames;
+    }
+
+    @OneToMany(
+            mappedBy = "game",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Usergame> usergames = new ArrayList<>();
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Game game = (Game) o;
+        return Objects.equals(gameXY, game.getGameXY());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(gameXY);
+    }
 
 
 }
