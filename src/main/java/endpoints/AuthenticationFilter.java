@@ -26,9 +26,12 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     public void filter(ContainerRequestContext requestContext) throws IOException {
 
         System.out.println("Filter");
+        System.out.println("headers"+requestContext.getHeaders());
+
 
         String authorizationHeader =
                 requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+
 
         if (!isTokenBasedAuthentication(authorizationHeader)) {
             abortWithUnauthorized(requestContext);
@@ -36,6 +39,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
         }
         String token = authorizationHeader
                 .substring(AUTHENTICATION_SCHEME.length()).trim();
+
 
         try {
             validateToken(token);

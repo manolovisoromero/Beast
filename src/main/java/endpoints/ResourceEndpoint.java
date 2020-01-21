@@ -1,6 +1,8 @@
 package endpoints;
 
 import REST_calls.PostUsergame;
+import REST_calls.postNoteRequest;
+import REST_calls.putNoteRequest;
 import com.google.gson.Gson;
 import entities.Game;
 import entities.Note;
@@ -20,9 +22,6 @@ public class ResourceEndpoint {
 
     Machine machine = Machine.getInstance();
     Gson gson = new Gson();
-
-
-
 
 
     @GET
@@ -57,7 +56,6 @@ public class ResourceEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response newUsername(PostUsergame postUsergame){
         return machine.winCheck(postUsergame);
-
     }
 
     @GET
@@ -68,7 +66,7 @@ public class ResourceEndpoint {
         String game = machine.getUnplayedGame(Integer.parseInt(userID));
         return Response.ok() //200
                 .entity(game)
-                .header("Access-Control-Allow-Origin", "http://localhost:3000")
+                .header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
                 .allow("OPTIONS").build();
     }
@@ -87,12 +85,11 @@ public class ResourceEndpoint {
 
 
     @DELETE
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/game/{gameid}")
-    public Response deleteGame(
-            @PathParam("gameid") int gameid) {
+    public Response deleteGame(@PathParam("gameid") int gameid) {
         String msg = machine.deleteGame(gameid);
         if (msg.equals("Succesfully deleted")) {
             return Response.ok() //200
@@ -182,8 +179,12 @@ public class ResourceEndpoint {
     }
 
 
+
+
+
     @GET
     @Path("/note/{userid}")
+    //@AuthenticationEndpoint.Secured
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getNotes( @PathParam("userid") int userID){
@@ -199,24 +200,80 @@ public class ResourceEndpoint {
     }
 
 
-
-
-
     @DELETE
     @Path("/note/{noteid}")
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
     public Response deleteNote( @PathParam("noteid") int noteID){
 
-        machine.deleteNote(noteID);
+        String msg = machine.deleteNote(noteID);
 
-        return Response.ok() //200
-                .entity("hoi")
-                .header("Access-Control-Allow-Origin", "http://localhost:3000")
-                .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
-                .allow("OPTIONS").build();
+        if(msg.equals("Success")){
+            return Response
+                    .status(202)
+                    .entity(msg)
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                    .allow("OPTIONS").build();
+        }else{
+            return Response
+                    .status(400)
+                    .entity(msg)
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT")
+                    .allow("OPTIONS").build();
+        }
+    }
+
+    @POST
+    @Path("/note")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response postNote( postNoteRequest postNoteRequest){
+
+        String postMsg = machine.postNote(postNoteRequest.getUserID(),postNoteRequest.getContent());
+
+        if(postMsg.equals("Success")){
+            return   Response.status(202)
+                    .entity(postMsg)
+                    .build();
+        }else{
+            return Response
+                    .status(400)
+                    .entity(postMsg)
+                    .build();
+        }
+
 
     }
+
+    @PUT
+    @Path("/note")
+    //@AuthenticationEndpoint.Secured
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response putNote( putNoteRequest putNoteRequest){
+
+        System.out.println(putNoteRequest.getContent());
+        System.out.println(putNoteRequest.getNoteID());
+        String putMsg = machine.updateNote(putNoteRequest.getNoteID(),putNoteRequest.getContent());
+
+
+        if(putMsg.equals("Success")){
+            return   Response.status(202)
+                    .entity(putMsg)
+                    .build();
+        }else{
+            return Response
+                    .status(400)
+                    .entity(putMsg)
+                    .build();
+        }
+
+
+    }
+
+
 
 
 }

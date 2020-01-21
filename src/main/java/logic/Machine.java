@@ -12,6 +12,7 @@ import REST_calls.PostUsergame;
 import REST_calls.RegisterRequest;
 import REST_calls.ReturnMsg;
 import com.google.gson.Gson;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
@@ -20,6 +21,8 @@ import java.util.List;
 import java.util.Random;
 
 import entities.*;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 
 import javax.ws.rs.core.Response;
 
@@ -123,6 +126,7 @@ public class Machine {
                 user.setToken(token);
                 tokens.add(token);
                 session.update(user);
+                session.getTransaction().commit();
                 ReturnMsg returnMsg = new ReturnMsg();
                 returnMsg.setToken(user.getToken());
                 returnMsg.setUserID(user.getUserID());
@@ -153,6 +157,8 @@ public class Machine {
         }
 
     }
+
+
 
     private User getUser(String username){
         return null;
@@ -313,9 +319,18 @@ public class Machine {
 
     public String postNote(int userID, String content){
 
+
+
         try{
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
+
+            if(maximumNotesReached(session,userID)){
+                throw new Exception();
+            }
+
+
+
 
             entities.Note note = new Note();
             note.setContent(content);
@@ -454,7 +469,7 @@ public class Machine {
         return uniqueIds;
     }
 
-    public boolean arrayRightsize(boolean [][] game){
+    private boolean arrayRightsize(boolean[][] game){
         if(game.length == 5){
             for(int i = 0;i<game.length;i++){
                 if(game[i].length ==5){
@@ -504,6 +519,21 @@ public class Machine {
 
         return equal;
     }
+
+
+    private boolean maximumNotesReached(Session session, int userID){
+        Query query = session.createQuery("SELECT COUNT(*) FROM entities.Note  WHERE userID =:userid ");
+        query.setParameter("userid", userID);
+        Long count = (Long)query.uniqueResult();
+        System.out.println(count);
+        return count >= 5;
+    }
+
+
+
+
+
+
 
     public boolean validateToken(String token){
         return tokens.contains(token);

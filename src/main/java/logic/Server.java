@@ -15,6 +15,8 @@ import org.glassfish.jersey.servlet.ServletContainer;
 import javax.servlet.DispatcherType;
 import java.io.File;
 import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Server {
@@ -62,10 +64,18 @@ public class Server {
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
 
         handler.setContextPath("/");
+        Map<String, String> map = new HashMap<String, String>();
+        map.put(CrossOriginFilter.ALLOWED_METHODS_PARAM, "PUT,GET,POST,DELETE,HEAD,OPTIONS");
+        map.put(CrossOriginFilter.ALLOWED_HEADERS_PARAM, "*");
 
         FilterHolder filterHolder = handler.addFilter(org.eclipse.jetty.servlets.CrossOriginFilter
                 .class, "/*", EnumSet.of(DispatcherType.REQUEST));
-        filterHolder.setInitParameter("allowedOrigins", "*");
+        filterHolder.setInitParameters(map);
+        filterHolder.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM,"Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin");
+
+
+        //filterHolder.setInitParameter("allowedMethods", "*");
+
 
 
 
