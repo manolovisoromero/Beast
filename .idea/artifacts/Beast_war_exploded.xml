@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Boodschappenlijst:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/Boodschappenlijst_war_exploded</output-path>
+  <artifact type="exploded-war" name="Beast:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Beast_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="Beast/web/Web" />
       <element id="directory" name="WEB-INF">

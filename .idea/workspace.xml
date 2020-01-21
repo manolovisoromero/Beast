@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="" />
+    <list default="true" id="ba1fcf35-6da7-45fc-9740-0ed2e59c1e63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jetty_alpn_server_9_4_20_v20190813.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Beast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Beast.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Boodschappenlijst_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Beast_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Machine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Server.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +36,154 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="249" column="8" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="8" />
+              <folding>
+                <element signature="method#getGameById#0;class#ResourceEndpoint#0" />
+                <element signature="method#corstest#0;class#ResourceEndpoint#0" />
+                <element signature="method#getUnplayedGame#0;class#ResourceEndpoint#0" />
+                <element signature="method#getAllGames#0;class#ResourceEndpoint#0" />
+                <element signature="method#deleteGame#0;class#ResourceEndpoint#0" />
+                <element signature="method#postGame#0;class#ResourceEndpoint#0" />
+                <element signature="method#getUserById#0;class#ResourceEndpoint#0" />
+                <element signature="method#getAllUsers#0;class#ResourceEndpoint#0" />
+                <element signature="method#deleteUser#0;class#ResourceEndpoint#0" />
+                <element signature="method#postUser#0;class#ResourceEndpoint#0" />
+                <element signature="method#getNotes#0;class#ResourceEndpoint#0" />
+                <element signature="method#deleteNote#0;class#ResourceEndpoint#0" />
+                <element signature="method#deleteNote#1;class#ResourceEndpoint#0" />
+                <element signature="method#postNote#1;class#ResourceEndpoint#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/postNoteRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#147#148#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/putNoteRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding>
+                <element signature="e#115#116#0" expanded="true" />
+                <element signature="e#144#145#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/LoginEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="83" column="87" lean-forward="true" selection-start-line="83" selection-start-column="87" selection-end-line="83" selection-end-column="87" />
+              <folding>
+                <element signature="e#2333#2349#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlets/9.4.14.v20181114/jetty-servlets-9.4.14.v20181114.jar!/org/eclipse/jetty/servlets/CrossOriginFilter.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="52" column="97" selection-start-line="52" selection-start-column="97" selection-end-line="52" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Machine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="842">
+              <caret line="139" column="29" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="method#registerUser#0;class#Machine#0" />
+                <element signature="e#0#9#1" expanded="true" />
+                <element signature="method#changePassword#0;class#Machine#0" />
+                <element signature="e#0#35#1" expanded="true" />
+                <element signature="method#getGamesByUser#0;class#Machine#0" />
+                <element signature="method#getUnplayedGame#0;class#Machine#0" />
+                <element signature="e#0#56#0" expanded="true" />
+                <element signature="e#0#18#1" expanded="true" />
+                <element signature="e#0#47#1" expanded="true" />
+                <element signature="method#findUnplayedGame#0;class#Machine#0" />
+                <element signature="method#postGame#0;class#Machine#0" />
+                <element signature="method#deleteGame#0;class#Machine#0" />
+                <element signature="e#8281#8914#0" />
+                <element signature="e#0#37#1" expanded="true" />
+                <element signature="method#getNotesByUser#0;class#Machine#0" />
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="method#postNote#0;class#Machine#0" />
+                <element signature="method#deleteNote#0;class#Machine#0" />
+                <element signature="method#updateNote#0;class#Machine#0" />
+                <element signature="e#10919#11245#0" />
+                <element signature="method#winCheck#0;class#Machine#0" />
+                <element signature="method#getUniqueId#0;class#Machine#0" />
+                <element signature="e#0#39#1" expanded="true" />
+                <element signature="method#arrayRightsize#0;class#Machine#0" />
+                <element signature="method#passwordHasher#0;class#Machine#0" />
+                <element signature="method#checkArrayEqual#0;class#Machine#0" />
+                <element signature="method#maximumNotesReached#0;class#Machine#0" />
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -44,6 +203,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/logic/Machine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/Server.java" />
+      </list>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -51,9 +220,109 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="651" />
+    <option name="width" value="1277" />
+    <option name="height" value="1056" />
+  </component>
   <component name="ProjectId" id="1QgYYZTCfUf5QXzj4G7TuBdpBAF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="endpoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="REST_calls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="ssl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Beast" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Beast" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -106,7 +375,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GameHandlerTest (1)">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="logic.Server" />
       <module name="Beast" />
@@ -157,8 +426,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameHandlerTest (1)" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.GameHandlerTest (1)" />
         <item itemvalue="JUnit.GameHandlerTest" />
         <item itemvalue="JUnit.GameHandlerTest.create_Left_Labels" />
         <item itemvalue="Application.Test" />
@@ -292,6 +561,82 @@
       <configuration name="GameHandlerTest" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6714000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14605543" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Persistence" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.22101842" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50053304" side_tool="true" weight="0.37053087" />
+      <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.49946696" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32922733" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49946696" weight="0.32827735" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info active="true" anchor="bottom" id="Run" order="13" sideWeight="0.49946696" visible="true" weight="0.3261105" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14232409" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Persistence" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.22101842" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32922733" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32827735" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.2881907" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -314,6 +659,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -343,6 +694,129 @@
     <MESSAGE value="CRUD alle entiteiten" />
     <MESSAGE value="surefire" />
     <option name="LAST_COMMIT_MESSAGE" value="surefire" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/putNoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#115#116#0" expanded="true" />
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/REST_calls/postNoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Machine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="139" column="29" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#registerUser#0;class#Machine#0" />
+            <element signature="e#0#9#1" expanded="true" />
+            <element signature="method#changePassword#0;class#Machine#0" />
+            <element signature="e#0#35#1" expanded="true" />
+            <element signature="method#getGamesByUser#0;class#Machine#0" />
+            <element signature="method#getUnplayedGame#0;class#Machine#0" />
+            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#18#1" expanded="true" />
+            <element signature="e#0#47#1" expanded="true" />
+            <element signature="method#findUnplayedGame#0;class#Machine#0" />
+            <element signature="method#postGame#0;class#Machine#0" />
+            <element signature="method#deleteGame#0;class#Machine#0" />
+            <element signature="e#8281#8914#0" />
+            <element signature="e#0#37#1" expanded="true" />
+            <element signature="method#getNotesByUser#0;class#Machine#0" />
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="method#postNote#0;class#Machine#0" />
+            <element signature="method#deleteNote#0;class#Machine#0" />
+            <element signature="method#updateNote#0;class#Machine#0" />
+            <element signature="e#10919#11245#0" />
+            <element signature="method#winCheck#0;class#Machine#0" />
+            <element signature="method#getUniqueId#0;class#Machine#0" />
+            <element signature="e#0#39#1" expanded="true" />
+            <element signature="method#arrayRightsize#0;class#Machine#0" />
+            <element signature="method#passwordHasher#0;class#Machine#0" />
+            <element signature="method#checkArrayEqual#0;class#Machine#0" />
+            <element signature="method#maximumNotesReached#0;class#Machine#0" />
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/ResourceEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="249" column="8" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="8" />
+          <folding>
+            <element signature="method#getGameById#0;class#ResourceEndpoint#0" />
+            <element signature="method#corstest#0;class#ResourceEndpoint#0" />
+            <element signature="method#getUnplayedGame#0;class#ResourceEndpoint#0" />
+            <element signature="method#getAllGames#0;class#ResourceEndpoint#0" />
+            <element signature="method#deleteGame#0;class#ResourceEndpoint#0" />
+            <element signature="method#postGame#0;class#ResourceEndpoint#0" />
+            <element signature="method#getUserById#0;class#ResourceEndpoint#0" />
+            <element signature="method#getAllUsers#0;class#ResourceEndpoint#0" />
+            <element signature="method#deleteUser#0;class#ResourceEndpoint#0" />
+            <element signature="method#postUser#0;class#ResourceEndpoint#0" />
+            <element signature="method#getNotes#0;class#ResourceEndpoint#0" />
+            <element signature="method#deleteNote#0;class#ResourceEndpoint#0" />
+            <element signature="method#deleteNote#1;class#ResourceEndpoint#0" />
+            <element signature="method#postNote#1;class#ResourceEndpoint#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/endpoints/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlets/9.4.14.v20181114/jetty-servlets-9.4.14.v20181114.jar!/org/eclipse/jetty/servlets/CrossOriginFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="52" column="97" selection-start-line="52" selection-start-column="97" selection-end-line="52" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="83" column="87" lean-forward="true" selection-start-line="83" selection-start-column="87" selection-end-line="83" selection-end-column="87" />
+          <folding>
+            <element signature="e#2333#2349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

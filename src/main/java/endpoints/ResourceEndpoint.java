@@ -24,9 +24,6 @@ public class ResourceEndpoint {
     Gson gson = new Gson();
 
 
-
-
-
     @GET
     @AuthenticationEndpoint.Secured
     @Path("/games/{id}")
@@ -88,12 +85,11 @@ public class ResourceEndpoint {
 
 
     @DELETE
-    @AuthenticationEndpoint.Secured
+    //@AuthenticationEndpoint.Secured
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/game/{gameid}")
-    public Response deleteGame(
-            @PathParam("gameid") int gameid) {
+    public Response deleteGame(@PathParam("gameid") int gameid) {
         String msg = machine.deleteGame(gameid);
         if (msg.equals("Succesfully deleted")) {
             return Response.ok() //200
@@ -183,8 +179,12 @@ public class ResourceEndpoint {
     }
 
 
+
+
+
     @GET
     @Path("/note/{userid}")
+    //@AuthenticationEndpoint.Secured
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getNotes( @PathParam("userid") int userID){
@@ -198,9 +198,6 @@ public class ResourceEndpoint {
                 .allow("OPTIONS").build();
 
     }
-
-
-
 
 
     @DELETE

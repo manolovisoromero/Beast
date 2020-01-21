@@ -114,6 +114,7 @@ public class Machine {
                 String token = generateToken();
                 user.setToken(token);
                 session.update(user);
+                session.getTransaction().commit();
                 ReturnMsg returnMsg = new ReturnMsg();
                 returnMsg.setToken(user.getToken());
                 returnMsg.setUserID(user.getUserID());
@@ -151,10 +152,6 @@ public class Machine {
 
 
 
-    private User getUser(String username){
-        return null;
-
-    }
 
     /*
     CRUD for Game
@@ -408,12 +405,7 @@ public class Machine {
         HibernateUtil.shutdown();
 
     }
-
-
-
         return "Success";
-
-
     }
 
     public String updateNote(int noteID, String content){
