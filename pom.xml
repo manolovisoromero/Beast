@@ -14,7 +14,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <jersey-server.version>2.27</jersey-server.version>
-        <jetty-server.version>9.4.14.v20181114</jetty-server.version>
+        <jetty-server.version>9.4.41.v20210516</jetty-server.version>
     </properties>
     <dependencies>
         <!-- Junit5 for unit testing -->
